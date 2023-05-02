@@ -1,3 +1,5 @@
+using System;
+
 public class Job
 {
 
@@ -6,7 +8,7 @@ public class Job
     public int _startYear = 0;
     public int _endYear = 0;
 
-    public void DisplayJobs()
+    public void Display()
     {
         Console.WriteLine($"{_company} {_jobTitle} {_endYear} - {_startYear}");
     }
