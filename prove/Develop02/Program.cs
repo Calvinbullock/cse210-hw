@@ -1,16 +1,22 @@
 using System;
 using System.Collections.Generic;
 
+// Journal Program
 namespace Develop02
 {
-
     class Program
     {
         static void Main(string[] args)
         {
+
+            // Menu test case
+
+            // ------------------------------------------------------------------ \\
+            // // Entry and Journal test case
+
             // Entry myEntry = new Entry();
             // myEntry.Store("What is my name?", "Calvin Bullock", "8 may 2023");
-            
+
             // Entry yourEntry = new Entry();
             // yourEntry.Store("What is your name?", "Matt", "8 may 2023");
 
@@ -38,9 +44,6 @@ namespace Develop02
             // FileManager fileMan = new FileManager();
             // string file = "journalEntry.txt";
             // string content = "If the wighted companion cube talks back ignore it.\nNot that it can talk back.";
-
-            // ------------------------------------------------------------------ \\
-            // FIleManger test case
 
             // fileMan.SaveToFile(file, content);
             // string fileContent = fileMan.ReadFromFile(file);
