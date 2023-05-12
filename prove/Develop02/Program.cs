@@ -12,9 +12,11 @@ namespace Develop02
             // ------------------------------------------------------------------ \\
             // Main Run
 
-            // Creats main Menu and CosoleInteract instance s
+            // Creats main Menu, Journal and CosoleInteract instances
             Menu menu = new Menu();
+            Journal journal = new Journal();
             ConsoleInteract console = new ConsoleInteract();
+
 
             // The detuminer of what action from the menu is taken
             // Delared so it is in and out of the do while scope
@@ -25,9 +27,9 @@ namespace Develop02
             {
                 // propmpts the user for an action.
                 menuChoice = console.MenuInteract(menu);
-                
+
                 // Parses the user choice and enacts it
-                menu.StartMenuLogic(menuChoice);
+                menu.StartMenuLogic(menuChoice, journal);
             }
             while (menuChoice != 5);
             Console.WriteLine("Good Bye");

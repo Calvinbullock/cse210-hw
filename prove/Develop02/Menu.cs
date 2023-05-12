@@ -17,19 +17,19 @@ namespace Develop02
                         "5. Quit"
                     };
 
-        public List<string> GetMenuItems() {
+        public List<string> GetMenuItems()
+        {
             return menuItems;
         }
 
-        public void StartMenuLogic(int menuItem)
+        public void StartMenuLogic(int menuItem, Journal journal)
         {
             // Creats instances of FileManager and ConsoleInteract 
             FileManager fileMan = new FileManager();
-            ConsoleInteract console1 = new ConsoleInteract();
+            ConsoleInteract console1 = new ConsoleInteract(); // Might be redundent think about just passing in console
 
-            // creats new instance of Prompt and Journal
+            // creats new instance of Prompt
             Prompts prompt = new Prompts();
-            Journal journal = new Journal();
 
             // creats an instance of dateTime
             DateTime date1 = new DateTime();
@@ -47,12 +47,15 @@ namespace Develop02
                     // Creats a new journal entry
                     Entry myEntry = new Entry();
                     myEntry.Store(randPrompt, entry, dateOnly.ToString("MM/dd/yyyy"));
+                    // Console.WriteLine(myEntry.ToString() + "pop-51"); // ---------------------------------------------- $$$$$$ Remove
 
                     // Adds the entry to the active journal
                     journal.StoreEntry(myEntry);
+                    // Console.WriteLine(journal.entries.Count + "pop-55"); // ---------------------------------------------- $$$$$$ Remove
                     break;
 
                 case 2: // Display
+                    // Console.WriteLine(journal.entries.Count); // ---------------------------------------------- $$$$$$ Remove
                     console1.DisplayJournalEntries(journal);
                     break;
 
@@ -61,15 +64,20 @@ namespace Develop02
                     fileName = console1.FileSelector();
 
                     // Stores content to user given file
-                    fileMan.ReadFromFile(fileName);
+                    fileMan.ReadFromFile(fileName, journal);
                     break;
 
                 case 4: // Save
                     // Gets filename from user input
                     fileName = console1.FileSelector();
+                    List<Entry> entries = journal.GetAllEntrys();
 
+                    foreach (Entry eachEntry in entries)
+                    {
                     // Stores content to user given file
-                    // fileMan.SaveToFile(fileName, content); //TODO BROKEN CONTENT VARIABLE
+                    fileMan.SaveToFile(fileName, eachEntry.GetAsString());
+                    }
+
                     break;
 
                 case 5: // Exit program
