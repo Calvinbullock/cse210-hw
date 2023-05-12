@@ -1,14 +1,13 @@
 using System;
 using System.IO;
 using System.Text;
-using System.Collections.Generic;
 
 namespace Develop02
 {
     class FileManager
     {
         public FileManager() { }
-        public void saveToFile(string fileName, string fileContent)
+        public void SaveToFile(string fileName, string fileContent)
         {
             try
             {
@@ -28,7 +27,7 @@ namespace Develop02
             finally { } // Not sure if i need something here or not
         }
 
-        public string readFromFile(string fileName)
+        public string ReadFromFile(string fileName)
         {
             string fileContent = "";
             try
