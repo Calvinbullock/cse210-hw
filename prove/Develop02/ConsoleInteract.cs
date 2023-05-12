@@ -58,7 +58,7 @@ namespace Develop02
         {
             // Reutrns: a file name as a String
             // Prompt for file name to save or load from.
-            Console.WriteLine("What is the file name?\n>");
+            Console.Write("What is the file name?\n>");
             string fileName = Console.ReadLine();
 
             return fileName;
