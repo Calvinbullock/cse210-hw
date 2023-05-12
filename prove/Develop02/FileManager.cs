@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Develop02
 {
+    ///<summary> 
+    // The responibility of FileManager is to handle the reading and writeing of Journal to files.
+    ///</summary> 
     class FileManager
     {
         public FileManager() { }
