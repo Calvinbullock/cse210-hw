@@ -9,7 +9,28 @@ namespace Develop02
         static void Main(string[] args)
         {
 
-            // Menu test case
+            // ------------------------------------------------------------------ \\
+            // Main Run
+
+            // Creats main Menu and CosoleInteract instance s
+            Menu menu = new Menu();
+            ConsoleInteract console = new ConsoleInteract();
+
+            // The detuminer of what action from the menu is taken
+            // Delared so it is in and out of the do while scope
+            int menuChoice;
+
+            // Loop will only stop when the user inputs a 5 (menu exit choice)
+            do
+            {
+                // propmpts the user for an action.
+                menuChoice = console.MenuInteract(menu);
+                
+                // Parses the user choice and enacts it
+                menu.StartMenuLogic(menuChoice);
+            }
+            while (menuChoice != 5);
+            Console.WriteLine("Good Bye");
 
             // ------------------------------------------------------------------ \\
             // // Entry and Journal test case
