@@ -3,6 +3,9 @@ using System;
 
 namespace Develop02
 {
+    ///<summary> 
+    // The responibility of Menu is to store the menu items and deturnman what action will be taken.
+    ///</summary> 
     class Menu
     {
         List<string> menuItems = new List<string>()
