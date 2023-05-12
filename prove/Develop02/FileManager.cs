@@ -19,23 +19,24 @@ namespace Develop02
             string fileContent = "";
             String line;
             
-
             //Pass the file path and file name to the StreamReader constructor
-            StreamReader sr = new StreamReader(fileName);
+            StreamReader stream = new StreamReader(fileName);
+
             //Read the first line of text
-            line = sr.ReadLine();
+            line = stream.ReadLine();
+
             //Continue to read until you reach end of file
             while (line != null)
             {
                 //write the line to console window
                 fileContent += line;
+                
                 //Read the next line
-                line = sr.ReadLine();
+                line = stream.ReadLine();
             }
             //close the file
-            sr.Close();
-            Console.ReadLine();
-
+            stream.Close();
+            
             // Return the file contents as a string
             return fileContent;
         }
