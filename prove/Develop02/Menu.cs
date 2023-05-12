@@ -14,6 +14,10 @@ namespace Develop02
                         "5. Quit"
                     };
 
+        public List<string> GetMenuItems() {
+            return menuItems;
+        }
+
         public void StartMenuLogic(int menuItem)
         {
             // Creats instances of FileManager and ConsoleInteract 
