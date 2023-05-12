@@ -4,7 +4,8 @@ using System;
 namespace Develop02
 {
     ///<summary> 
-    // The responibility of am journal is to store instances of the entry class
+    // The responibility of ConsoleInteract is to handal all console interactions
+    // Both input and output.
     ///</summary> 
     class ConsoleInteract
     {
@@ -35,18 +36,21 @@ namespace Develop02
             // Prompts the user for input.
             // Paramiter: string - journal prompt
             // returns: the users input as a string.
-            Console.WriteLine($"{prompt}\n>");
+            Console.Write($"{prompt}\n>");
             string entry = Console.ReadLine();
             return entry;
         }
 
         public void DisplayJournalEntries(Journal journal)
         {
+            // gets all the journal entries from the Joural class list
             List<Entry> entries = journal.GetAllEntrys();
+
+            // loops trough the Journal List of Entries instances prints each Entry
             foreach (Entry entry in entries)
             {
-                string message = entry.GetAsString();
-                Console.WriteLine(message);
+                // Gets the instance of Entry from Entry and prints to console
+                Console.WriteLine(entry.GetAsString());
             }
         }
 
