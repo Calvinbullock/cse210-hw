@@ -14,13 +14,13 @@ namespace Develop02
         {
             try
             {
-                //Open the File
+                // Open the File
                 StreamWriter stream = new StreamWriter(fileName, true, Encoding.ASCII);
 
                 // Writes content to file
                 stream.WriteLine(fileContent);
 
-                //close the file
+                // Close the file
                 stream.Close();
             }
             catch (Exception e)
@@ -30,29 +30,29 @@ namespace Develop02
             finally { } // Not sure if i need something here or not
         }
 
-        public string ReadFromFile(string fileName)
+        public string ReadFromFile(string fileName, Journal journal)
         {
             string fileContent = "";
             try
             {
                 String line;
 
-                //Pass the file path and file name to the StreamReader constructor
+                // Pass the file path and file name to the StreamReader constructor
                 StreamReader stream = new StreamReader(fileName);
 
-                //Read the first line of text
+                // Read the first line of text
                 line = stream.ReadLine();
 
-                //Continue to read until you reach end of file
+                // Continue to read until you reach end of file
                 while (line != null)
                 {
-                    //write the line to console window
+                    // write the line to console window
                     fileContent += line + "\n";
 
-                    //Read the next line
+                    // Read the next line
                     line = stream.ReadLine();
                 }
-                //close the file
+                // Close the file
                 stream.Close();
             }
             catch (Exception e)
