@@ -28,10 +28,10 @@ namespace Develop02
             FileManager fileMan = new FileManager();
             ConsoleInteract console1 = new ConsoleInteract(); // Might be redundent think about just passing in console
 
-            // creats new instance of Prompt
+            // Creats new instance of Prompt
             Prompts prompt = new Prompts();
 
-            // creats an instance of dateTime
+            // Creats an instance of dateTime
             DateTime date1 = new DateTime();
             DateTime dateOnly = date1.Date;
 
