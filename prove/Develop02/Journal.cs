@@ -15,6 +15,7 @@ namespace Develop02
 
         public List<Entry> GetAllEntrys()
         {
+            // Returns the whole List of Entries
             return entries;
         }
 
