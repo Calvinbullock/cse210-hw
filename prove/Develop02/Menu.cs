@@ -35,7 +35,7 @@ namespace Develop02
             DateTime date1 = new DateTime();
             DateTime dateOnly = date1.Date;
 
-            // A string to store the user input fileName 
+            // A string to store the user input fileName
             string fileName;
 
             switch (menuItem)
@@ -77,11 +77,9 @@ namespace Develop02
                     // Stores content to user given file
                     fileMan.SaveToFile(fileName, eachEntry.GetAsString());
                     }
-
                     break;
 
                 case 5: // Exit program
-                    // exit the program
                     break;
             }
         }
