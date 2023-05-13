@@ -60,7 +60,6 @@ namespace Develop02
             // Prompt for file name to save or load from.
             Console.Write("What is the file name?\n>");
             string fileName = Console.ReadLine();
-
             return fileName;
         }
     }
