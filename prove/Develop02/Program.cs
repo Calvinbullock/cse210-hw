@@ -72,6 +72,26 @@ namespace Develop02
             // string fileContent = fileMan.ReadFromFile(file);
             // Console.WriteLine($"{fileContent}");
 
+            // ------------------------------------------------------------------ \\
+            // SandBox
+
+            // string fileContent = "Date: 01/01/0001 - Prompt: What was the best part of my day?\ntesting 1.\n";
+
+            // int strPosition1 = fileContent.IndexOf("Date: ");
+            // int strPosition2 = fileContent.IndexOf("Prompt: ");
+            // int strPosition3 = fileContent.IndexOf("?");
+            // int strPosition4 = fileContent.IndexOf(".\n");
+            // Console.WriteLine($"{strPosition1}, {strPosition2}, {strPosition3}, {strPosition4}");
+
+            // string print1 = fileContent.Substring(strPosition1 + 6, 10);
+
+            // string print2 = fileContent.Substring(strPosition2 + 8, strPosition3 - strPosition2 - 7);
+
+            // string print3 = fileContent.Substring(strPosition3, strPosition4 - strPosition3);
+
+            // // Store in a list in groupes of 3...
+            // // Store in a list in groupes of 3...
+            // Console.WriteLine($"\"{print1}\", \"{print2}\", \"{print3}\"");
         }
     }
 }
