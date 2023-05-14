@@ -47,15 +47,12 @@ namespace Develop02
                     // Creats a new journal entry
                     Entry myEntry = new Entry();
                     myEntry.Store(randPrompt, entry, dateText);
-                    // Console.WriteLine(myEntry.ToString() + "pop-51"); // ---------------------------------------------- $$$$$$ Remove
 
                     // Adds the entry to the active journal
                     journal.StoreEntry(myEntry);
-                    // Console.WriteLine(journal.entries.Count + "pop-55"); // ---------------------------------------------- $$$$$$ Remove
                     break;
 
                 case 2: // Display
-                    // Console.WriteLine(journal.entries.Count); // ---------------------------------------------- $$$$$$ Remove
                     console1.DisplayJournalEntries(journal);
                     break;
 
