@@ -72,7 +72,7 @@ namespace Develop02
                     foreach (Entry eachEntry in entries)
                     {
                         // Stores content to user given file
-                        fileMan.SaveToFile(fileName, eachEntry.GetAsString());
+                        fileMan.SaveToFile(fileName, eachEntry.GetAsStringForSave());
                     }
                     break;
 
