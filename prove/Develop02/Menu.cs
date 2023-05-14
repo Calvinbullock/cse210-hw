@@ -32,8 +32,8 @@ namespace Develop02
             Prompts prompt = new Prompts();
 
             // Creats an instance of dateTime
-            DateTime date1 = new DateTime();
-            DateTime dateOnly = date1.Date;
+            DateTime theCurrentTime = DateTime.Now;
+            string dateText = theCurrentTime.ToShortDateString();
 
             // A string to store the user input fileName
             string fileName;
@@ -46,7 +46,7 @@ namespace Develop02
 
                     // Creats a new journal entry
                     Entry myEntry = new Entry();
-                    myEntry.Store(randPrompt, entry, dateOnly.ToString("MM/dd/yyyy"));
+                    myEntry.Store(randPrompt, entry, dateText);
                     // Console.WriteLine(myEntry.ToString() + "pop-51"); // ---------------------------------------------- $$$$$$ Remove
 
                     // Adds the entry to the active journal
@@ -74,8 +74,8 @@ namespace Develop02
 
                     foreach (Entry eachEntry in entries)
                     {
-                    // Stores content to user given file
-                    fileMan.SaveToFile(fileName, eachEntry.GetAsString());
+                        // Stores content to user given file
+                        fileMan.SaveToFile(fileName, eachEntry.GetAsString());
                     }
                     break;
 
