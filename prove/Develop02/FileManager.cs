@@ -66,7 +66,7 @@ namespace Develop02
             char[] delimiters = new char[] { ':', '-', '\n' };
 
             // Console.WriteLine($"L.70"); // DEBUG
-            // Breaks FileContent into substrings
+            // Parses FileContent into substrings
             int count = 0;
             foreach (string index in fileContent.Split(delimiters, StringSplitOptions.RemoveEmptyEntries))
             {
@@ -75,30 +75,30 @@ namespace Develop02
                 {
                     if (count % 3 == 0)
                     {
-                        // Console.WriteLine($"L.79'{index}', '{count}'"); // DEBUG
+                        Console.WriteLine($"L.79'{index}', '{count}'"); // DEBUG
                         sub.Add(index);
                     }
                     else if (count % 4 == 0)
                     {
-                        // Console.WriteLine($"L.84'{index}', '{count}'"); // DEBUG
+                        Console.WriteLine($"L.84'{index}', '{count}'"); // DEBUG
                         sub.Add(index);
                     }
                     else if (count == 1)
                     {
-                        // Console.WriteLine($"L.84'{index}', '{count}'"); // DEBUG
+                        Console.WriteLine($"L.84'{index}', '{count}'"); // DEBUG
                         sub.Add(index);
                     }
                 }
                 count++;
             }
 
-            Console.WriteLine($"L.89"); // DEBUG
+            // Stores the parsed file content to new entries 
             count = 0;
             foreach (string index in sub)
             {
-                if (count % 3 == 0 && count + 3 < sub.Count)
+                if (count % 3 == 0)
                 {
-                    // Console.WriteLine($"L.84'{sub[count]}', '{sub[count + 1]}', '{sub[count + 2]}'"); // DEBUG
+                    Console.WriteLine($"L.84'{sub[count]}', '{sub[count + 1]}', '{sub[count + 2]}'"); // DEBUG
                     yourEntry.Store(sub[count+1], sub[count + 2], sub[count]);
                 }
                 count++;
