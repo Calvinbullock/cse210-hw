@@ -3,7 +3,7 @@ using System;
 namespace Learning02
 {
 
-    class Program
+    class Fraction
     {
         static void Main(string[] args)
         {
