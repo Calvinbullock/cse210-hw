@@ -10,7 +10,6 @@ namespace Develop03
         public Scripture(string rawScripture)
         {
             _words = new List<Word>();
-
             SetWords(rawScripture);
         }
 

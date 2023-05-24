@@ -20,7 +20,7 @@ namespace Develop03
                 // Gets the output string then passes it to Display to output it
                 string scriptString = scripture.GetWordsAsString();
                 quit = ui.Display(scriptRefrance, scriptString);
-                
+
                 // Hide 3 word
                 scripture.HideRandomWord();
                 scripture.HideRandomWord();

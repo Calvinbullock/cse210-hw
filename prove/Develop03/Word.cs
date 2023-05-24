@@ -16,9 +16,10 @@ namespace Develop03
             // Get the word, if it is hidden will return underscores
             if (_hidden)
             {
-                string hiddenWord = "";
 
-                // Loop breaks the string into individuwal words based on spaces.
+                // Loop breaks the string into individuwal words 
+                // based on spaces.
+                string hiddenWord = "";
                 foreach (char letter in _word)
                 {
                     hiddenWord += "_";
