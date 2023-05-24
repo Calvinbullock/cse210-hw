@@ -31,6 +31,7 @@ namespace Develop03
                 scripture.HideRandomWord();
 
             }
+            // Do while user prompts cuntinue and not all words are hidden 
             while (quit == 0 && !allHiden);
         }
     }
