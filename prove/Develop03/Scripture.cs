@@ -26,7 +26,7 @@ namespace Develop03
 
             for (int i = 0; i < _words.Count; i++)
             {
-                wordsString += _words[i].GetWord();
+                wordsString += _words[i].GetWord() + " ";
             }
 
             return wordsString;
