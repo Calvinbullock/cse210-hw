@@ -4,6 +4,12 @@ namespace Develop03
     {
         private List<Word> _words;
 
+        public Scripture(string rawScripture) {
+            _words = new List<Word>();
+
+            SetWords(rawScripture);
+        }
+
         public List<Word> GetWords()
         {
             return _words;
