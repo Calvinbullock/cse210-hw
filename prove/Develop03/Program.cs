@@ -21,7 +21,7 @@ namespace Develop03
                 string scriptString = scripture.GetWordsAsString();
                 quit = ui.Display(scriptRefrance, scriptString);
 
-                // Hide 3 word
+                // Hide 3 words
                 scripture.HideRandomWord();
                 scripture.HideRandomWord();
                 scripture.HideRandomWord();
