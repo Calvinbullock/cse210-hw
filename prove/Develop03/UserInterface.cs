@@ -13,13 +13,13 @@ namespace Develop03
             return paragraph;
         }
 
-        public int Display(string scriptureString)
+        public int Display(string scriptRefrance, string scriptureString)
         {
             // This function displays the scripture and prompts for user's next action.
             // Function returns 1 if user wants to exit program.
 
             Console.Clear();
-            Console.WriteLine(scriptureString);
+            Console.WriteLine(scriptRefrance + "" + scriptureString);
 
             // Prompits for next action
             Console.Write($"\nEnter 'quit' to exit or next to hide next word.\n>");
