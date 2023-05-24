@@ -28,9 +28,9 @@ namespace Develop03
             return _word;
         }
 
-        public void IsHidden()
+        public bool IsHidden()
         {
-            // checks if the word is hidden
+            return _hidden;
         }
 
         public void Hide()
