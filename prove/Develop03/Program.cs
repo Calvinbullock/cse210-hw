@@ -17,7 +17,9 @@ namespace Develop03
             int quit;
             do
             {
-                quit = ui.Display(scripture);
+                // Gets the output string then passes it to Display to output it
+                string scriptString = scripture.GetWordsAsString();
+                quit = ui.Display(scriptString);
                 
                 // Hide a word
                 scripture.HideRandomWord();
