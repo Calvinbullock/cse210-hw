@@ -46,5 +46,17 @@ namespace Develop03
             }
         }
 
+        public void HideRandomWord()
+        {
+            // TODO Use recurstion to check if word is already hiden if yes
+            // call this function again
+
+            // Random num part
+            // https://stackoverflow.com/questions/3975290/produce-a-random-number-in-a-range-using-c-sharp
+            Random rand = new Random();
+            int randInt = rand.Next(0, _words.Count);
+
+            _words[randInt].Hide();
+        }
     }
 }

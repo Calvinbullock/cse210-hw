@@ -11,19 +11,10 @@ namespace Develop03
             return paragraph;
         }
 
-        public void HideRandomWord()
-        {
-            // calls hide()
-
-            // Random num part
-            // https://stackoverflow.com/questions/3975290/produce-a-random-number-in-a-range-using-c-sharp
-            Random r = new Random();
-            int rInt = r.Next(0, 100);
-        }
-
-        public void Display(Scripture scripture)
+        public int Display(Scripture scripture)
         {
             // This function displays the scripture and prompts for user's next action.
+            // Function returns 1 if user wants to exit program.
 
             // Gets the output string then prints it
             string scriptString = scripture.GetWordsAsString();
@@ -39,12 +30,13 @@ namespace Develop03
 
             // If user enters "Exit then the program returns to Program.cs main 
             // and ends. -- the use input will be changed to all lower case.
-            if (input.ToLower() == "exit") {
-                return;
+            if (input.ToLower() == "exit")
+            {
+                return 1;
             }
-            
-            
 
+            scripture.HideRandomWord();
+            return 0;
         }
     }
 }
