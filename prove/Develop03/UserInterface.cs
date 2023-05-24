@@ -18,7 +18,7 @@ namespace Develop03
             // This function displays the scripture and prompts for user's next action.
             // Function returns 1 if user wants to exit program.
 
-            // Console.Clear();
+            Console.Clear();
             Console.WriteLine(scriptRefrance + "" + scriptureString);
 
             // Prompits for next action
