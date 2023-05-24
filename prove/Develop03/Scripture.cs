@@ -46,6 +46,8 @@ namespace Develop03
 
         public void HideRandomWord()
         {
+            // Hides a random word and will not hide the same word twice
+
             // Random num code source:
             // https://stackoverflow.com/questions/3975290/produce-a-random-number-in-a-range-using-c-sharp
             Random rand = new Random();
