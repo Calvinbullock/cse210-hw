@@ -23,12 +23,27 @@ namespace Develop03
 
         public void Display(Scripture scripture)
         {
-            string scriptString = scripture.GetWordsAsString();
+            // This function displays the scripture and prompts for user's next action.
 
+            // Gets the output string then prints it
+            string scriptString = scripture.GetWordsAsString();
             Console.WriteLine(scriptString);
 
-            Console.WriteLine($"print words string");
-            Console.Write($"Enter 'quit' to exit or next to hide next word.\n>");
+            // Prompits for next action
+            Console.Write($"\nEnter 'quit' to exit or next to hide next word.\n>");
+            int rawInput = Console.Read();
+
+            // TODO might not be needed....
+            // turns rawInput to a string
+            string input = "" + rawInput;
+
+            // If user enters "Exit then the program returns to Program.cs main 
+            // and ends. -- the use input will be changed to all lower case.
+            if (input.ToLower() == "exit") {
+                return;
+            }
+            
+            
 
         }
     }
