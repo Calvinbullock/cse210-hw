@@ -32,6 +32,7 @@ namespace Develop03
                 return 1;
             }
 
+            // Cuntinue hiding words
             scripture.HideRandomWord();
             return 0;
         }
