@@ -7,9 +7,9 @@ namespace Develop03
         private bool _hidden;
         private string _word;
 
-        public Word(string word, bool hidden)
+        public Word(string word)
         {
-            _hidden = hidden;
+            _hidden = false;
             _word = word;
         }
 
@@ -21,7 +21,7 @@ namespace Develop03
                 string hiddenWord = "";
                 foreach (char letter in _word)
                 {
-                    hiddenWord += "-";
+                    hiddenWord += "_";
                 }
                 return hiddenWord;
             }
