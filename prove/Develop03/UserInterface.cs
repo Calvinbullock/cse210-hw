@@ -27,7 +27,7 @@ namespace Develop03
 
             // If user enters "Exit then the program returns to Program.cs main 
             // and ends. -- the use input will be changed to all lower case.
-            if (input.ToLower() == "exit")
+            if (input.ToLower() == "quit")
             {
                 return 1;
             }
