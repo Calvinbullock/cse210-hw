@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System;
+
 
 namespace Develop03
 {
@@ -44,8 +46,5 @@ namespace Develop03
             }
         }
 
-        public int GetWordCount() {
-            return _words.Count;
-        }
     }
 }
