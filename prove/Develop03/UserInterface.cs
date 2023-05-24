@@ -26,7 +26,7 @@ namespace Develop03
             string scriptString = scripture.GetWordsAsString();
 
             Console.WriteLine(scriptString);
-            
+
             Console.WriteLine($"print words string");
             Console.Write($"Enter 'quit' to exit or next to hide next word.\n>");
 

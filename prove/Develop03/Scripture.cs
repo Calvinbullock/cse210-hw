@@ -6,7 +6,8 @@ namespace Develop03
     {
         private List<Word> _words;
 
-        public Scripture(string rawScripture) {
+        public Scripture(string rawScripture)
+        {
             _words = new List<Word>();
 
             SetWords(rawScripture);
@@ -17,12 +18,14 @@ namespace Develop03
             return _words;
         }
 
-        public string GetWordsAsString() {
+        public string GetWordsAsString()
+        {
             // This function loops trough _words List and appends them all into a 
             // string then returns that string.
             string wordsString = "";
 
-            for (int i = 0; i < _words.Count; i++) {
+            for (int i = 0; i < _words.Count; i++)
+            {
                 wordsString += _words[i].GetWord();
             }
 
