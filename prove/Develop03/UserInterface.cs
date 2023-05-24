@@ -23,11 +23,7 @@ namespace Develop03
 
             // Prompits for next action
             Console.Write($"\nEnter 'quit' to exit or next to hide next word.\n>");
-            int rawInput = Console.Read();
-
-            // TODO might not be needed....
-            // turns rawInput to a string
-            string input = "" + rawInput;
+            string input = Console.ReadLine();
 
             // If user enters "Exit then the program returns to Program.cs main 
             // and ends. -- the use input will be changed to all lower case.
