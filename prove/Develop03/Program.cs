@@ -12,7 +12,14 @@ namespace Develop03
             Scripture scripture = new Scripture(rawScripture);
             UserInterface ui = new UserInterface();
 
-            ui.Display(scripture);
+            // Display() prompts the  user for input and returns a 1 for quit or 0 
+            // for cuntinue.
+            int quit;
+            do
+            {
+                quit = ui.Display(scripture);
+            }
+            while (quit == 0);
         }
     }
 }
