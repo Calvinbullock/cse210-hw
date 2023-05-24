@@ -6,6 +6,7 @@ namespace Develop03
     {
         public string EnterScripture()
         {
+            // Takes user input of a scripture to feed to 
             Console.Write($"Enter scripture.\n>");
             string paragraph = Console.ReadLine();
             return paragraph;
@@ -32,8 +33,6 @@ namespace Develop03
                 return 1;
             }
 
-            // Cuntinue hiding words
-            scripture.HideRandomWord();
             return 0;
         }
     }

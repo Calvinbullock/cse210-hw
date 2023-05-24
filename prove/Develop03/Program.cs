@@ -18,6 +18,9 @@ namespace Develop03
             do
             {
                 quit = ui.Display(scripture);
+                
+                // Hide a word
+                scripture.HideRandomWord();
             }
             while (quit == 0);
         }
