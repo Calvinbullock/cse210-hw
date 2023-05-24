@@ -46,13 +46,20 @@ namespace Develop03
 
         public void HideRandomWord()
         {
-            // TODO Use recurstion to check if word is already hiden if yes
-            // call this function again
-
             // Random num code source:
             // https://stackoverflow.com/questions/3975290/produce-a-random-number-in-a-range-using-c-sharp
             Random rand = new Random();
-            int randInt = rand.Next(0, _words.Count);
+            int randInt;
+            int i = 0;
+
+            // loop until word at index random is not hidden or until we hit the 
+            // end of _words
+            do
+            {
+                randInt = rand.Next(0, _words.Count);
+                i++;
+            }
+            while (_words[randInt].IsHidden() && i < _words.Count);
 
             // Takes random number and hides a random word
             _words[randInt].Hide();
