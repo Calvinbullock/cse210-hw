@@ -1,7 +1,5 @@
-using System;
 namespace Develop03
 {
-
     class Word
     {
         private bool _hidden;

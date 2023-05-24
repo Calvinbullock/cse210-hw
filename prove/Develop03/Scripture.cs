@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System;
 
-
 namespace Develop03
 {
     class Scripture
@@ -55,7 +54,7 @@ namespace Develop03
             // https://stackoverflow.com/questions/3975290/produce-a-random-number-in-a-range-using-c-sharp
             Random rand = new Random();
             int randInt = rand.Next(0, _words.Count);
-            
+
             // Takes random number and hides a random word
             _words[randInt].Hide();
         }
