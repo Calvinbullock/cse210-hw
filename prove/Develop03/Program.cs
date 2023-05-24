@@ -7,7 +7,7 @@ namespace Develop03
         static void Main(string[] args)
         {
 
-            string rawScripture = "Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy cpaths.";
+            string rawScripture = "Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.";
 
             Scripture scripture = new Scripture(rawScripture);
             UserInterface ui = new UserInterface();
