@@ -43,5 +43,9 @@ namespace Develop03
                 _words.Add(tempWord);
             }
         }
+
+        public int GetWordCount() {
+            return _words.Count;
+        }
     }
 }
