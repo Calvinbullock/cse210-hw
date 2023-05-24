@@ -21,10 +21,12 @@ namespace Develop03
             int rInt = r.Next(0, 100);
         }
 
-        public void Display()
+        public void Display(Scripture scripture)
         {
-            // calls GetWords()
+            string scriptString = scripture.GetWordsAsString();
 
+            Console.WriteLine(scriptString);
+            
             Console.WriteLine($"print words string");
             Console.Write($"Enter 'quit' to exit or next to hide next word.\n>");
 
