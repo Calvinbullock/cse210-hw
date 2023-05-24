@@ -11,8 +11,8 @@ namespace Develop03
             Scripture scripture = new Scripture(rawScripture);
             UserInterface ui = new UserInterface();
 
-            // Display() prompts the  user for input and returns a 1 for quit or 0 
-            // for cuntinue.
+            // Calls Display() > prompts the user for input and returns a 1 for quit  
+            // or 0 for cuntinue looping.
             int quit;
             do
             {
