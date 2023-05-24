@@ -19,12 +19,16 @@ namespace Develop03
             if (_hidden)
             {
                 string hiddenWord = "";
+
+                // Loop breaks the string into individuwal words based on spaces.
                 foreach (char letter in _word)
                 {
                     hiddenWord += "_";
                 }
+                // Hidden return
                 return hiddenWord;
             }
+            // Visable word return
             return _word;
         }
 
