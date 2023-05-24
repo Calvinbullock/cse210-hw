@@ -39,7 +39,7 @@ namespace Develop03
             foreach (string word in paragraph.Split(' '))
             {
                 // Adds the broken string bits to Words
-                Word tempWord = new Word(word, true);
+                Word tempWord = new Word(word);
                 _words.Add(tempWord);
             }
         }
