@@ -10,6 +10,13 @@ namespace Develop03
         }
 
         public string GetWordsAsString() {
+            // This function loops trough _words List and appends them all into a 
+            // string then returns that string.
+            string wordsString = "";
+
+            for (int i = 0; i < _words.Count; i++) {
+                wordsString += _words[i].GetWord();
+            }
             
             return wordsString;
         }
