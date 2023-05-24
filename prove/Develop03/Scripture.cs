@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Develop03
 {
     class Scripture
@@ -23,7 +25,7 @@ namespace Develop03
             for (int i = 0; i < _words.Count; i++) {
                 wordsString += _words[i].GetWord();
             }
-            
+
             return wordsString;
         }
 
@@ -31,7 +33,7 @@ namespace Develop03
         {
             // Calls word(spilt word)
             // Change user input from string to list
-            foreach (string word in paragraph.Split(':', StringSplitOptions.RemoveEmptyEntries))
+            foreach (string word in paragraph.Split(' '))
             {
                 // Adds the broken string bits to Words
                 Word tempWord = new Word(word, true);
