@@ -14,9 +14,13 @@ namespace Develop03
 
             // Calls Display() > prompts the user for input and returns a 1 for quit  
             // or 0 for cuntinue looping.
+            bool allHiden = false;
             int quit;
             do
             {
+                // Checks if all words are hidden
+                allHiden = scripture.AreAllWordsHidden();
+
                 // Gets the output string then passes it to Display to output it
                 string scriptString = scripture.GetWordsAsString();
                 quit = ui.Display(scriptRefrance, scriptString);
@@ -25,8 +29,9 @@ namespace Develop03
                 scripture.HideRandomWord();
                 scripture.HideRandomWord();
                 scripture.HideRandomWord();
+
             }
-            while (quit == 0);
+            while (quit == 0 && !allHiden);
         }
     }
 }

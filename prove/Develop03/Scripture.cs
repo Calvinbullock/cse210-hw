@@ -57,5 +57,17 @@ namespace Develop03
             // Takes random number and hides a random word
             _words[randInt].Hide();
         }
+
+        public bool AreAllWordsHidden()
+        {
+            for (int i = 0; i < _words.Count; i++)
+            {
+                if (!(_words[i].IsHidden()))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }
