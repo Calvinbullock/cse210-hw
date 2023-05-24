@@ -18,6 +18,7 @@ namespace Develop03
 
             // Gets the output string then prints it
             string scriptString = scripture.GetWordsAsString();
+            Console.Clear();
             Console.WriteLine(scriptString);
 
             // Prompits for next action
