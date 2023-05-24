@@ -69,8 +69,10 @@ namespace Develop03
 
         public bool AreAllWordsHidden()
         {
-            // Checks if all words are hidden if they are returns true 
-            // else false
+            // Checks if all words in _words are hidden if they are 
+            // returns true else false
+
+            // Loops trough all of _words and checks word is hidden
             for (int i = 0; i < _words.Count; i++)
             {
                 if (!(_words[i].IsHidden()))
