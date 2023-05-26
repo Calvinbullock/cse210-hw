@@ -7,8 +7,11 @@ namespace Develop03
     {
         private List<Word> _words;
 
-        public Scripture(string rawScripture)
+        private string _refrance;
+
+        public Scripture(string rawScripture, string refrance)
         {
+            _refrance = refrance;
             _words = new List<Word>();
             SetWords(rawScripture);
         }
@@ -16,6 +19,11 @@ namespace Develop03
         public List<Word> GetWords()
         {
             return _words;
+        }
+
+        public string GetRefrance()
+        {
+            return _refrance;
         }
 
         public string GetWordsAsString()
