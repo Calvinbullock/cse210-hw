@@ -1,50 +1,65 @@
+using System;
+using System.Threading;
+
+
 namespace Develop04
 {
     class Activity
     {
         private int _duration;
-        // The duration of the activity
 
         private string _reflection;
-        // Stores the user’s reflection of an activity
 
         private string _startMessage;
-        // The default start message in all of the Activities
 
         private string _endMessage;
-        // The default end message in all of the Activities
 
-        public string Animation()
+
+        public Activity() { }
+
+        public Activity(int duration, string startMessage, string endMessage, string reflection = "")
+        {
+            _duration = duration;
+            _reflection = reflection;
+            _startMessage = startMessage;
+            _endMessage = endMessage;
+        }
+
+        public void Animation()
         {
             // Stores the animation.
-            // \ | / – 
-            return "";
+            string[] animation = { "-", "\\", "|", "/", "-", "\\", "|", "//" };
+            int count = 0;
+
+            while (count != _duration)
+            {
+                foreach (string value in animation)
+                {
+                    Thread.Sleep(1000);
+                    Console.Write("\b");
+                    Console.Write(value);
+                }
+                count++;
+            }
         }
 
         public int GetDuration()
         {
-            // returns the requested duration
-            return 0;
+            return _duration;
         }
 
         public string ShowStartMessage()
         {
-            // returns the Start Message
-            return "";
+            return _startMessage;
         }
 
         public string ShowEndMessage()
         {
-            // Returns the End Message
-            return "";
+            return _endMessage;
         }
-        public void SetReflection()
+        public void SetReflection(string reflection)
         {
-            // Sets the Reflection
-        }
-        public void ShowMessage()
-        {
-            // Shows the message for the Activity
+            _reflection = reflection;
         }
 
         public void StartTimer()

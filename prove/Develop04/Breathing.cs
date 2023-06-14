@@ -5,6 +5,12 @@ namespace Develop04
         private int _breathInTime;
         private int _breathOutTime;
 
+        public Breathing(int breathInTime, int breathOutTime, int duration, string reflection, string startMessage, string endMessage)
+                    : base(duration, reflection, startMessage, endMessage)
+        {
+            breathInTime = _breathInTime;
+            breathOutTime = _breathOutTime;
+        }
 
         public int getBreathInTime()
         {
