@@ -22,13 +22,19 @@ namespace Develop04
             return 0;
         }
 
-        public void Menu() {
+        public int Menu()
+        {
+
+            // Console display
             Console.WriteLine("1. Start breathing activity.");
             Console.WriteLine("2. Start reflection activity.");
             Console.WriteLine("3. Start listing activity.");
             Console.WriteLine("4. Quit.");
             Console.Write("Enter a number to select an option: ");
-            int input = Console.Read();
+            int input = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+
+            return input;
         }
     }
 }
