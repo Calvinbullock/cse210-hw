@@ -17,6 +17,9 @@ namespace Develop04
 
         static void Main(string[] args)
         {
+            // This is needed...
+            Program program = new Program();
+
             // User interface class instatiation
             UserInterface UI = new UserInterface();
             UI.Menu();
