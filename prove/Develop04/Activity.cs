@@ -6,6 +6,9 @@ namespace Develop04
 {
     class Activity
     {
+        private DateTime _startTime;
+        private DateTime _endTime;
+
         private int _duration;
 
         private string _reflection;
@@ -19,6 +22,8 @@ namespace Develop04
 
         public Activity(string activityDescription, string endMessage, int duration = 0, string reflection = "")
         {
+            _startTime = DateTime.Now;
+            _endTime = _startTime.AddSeconds(duration);
             _duration = duration;
             _reflection = reflection;
             _activityDescription = activityDescription;
@@ -52,6 +57,7 @@ namespace Develop04
         public void SetDuration(int duration)
         {
             _duration = duration;
+            _endTime = _startTime.AddSeconds(duration);
         }
 
         public string GetActivityDescription()
