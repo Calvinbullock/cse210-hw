@@ -17,11 +17,27 @@ namespace Develop04
 
         static void Main(string[] args)
         {
-            string activityType = "";
+            // User interface class instatiation
+            UserInterface UI = new UserInterface();
+            UI.Menu();
 
-            string breatingStart = $"Welcome to the {activityType}, Please enter the amount of time you would like the activity to run for in seconds: \nThis activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
+            // Breating class instantiation
+            string activityTypeBreath = "Reflection Activity";
+            string breatingStartMsg = program.startMessage(activityTypeBreath);
+            string breatingEndMsg = program.endMessage(activityTypeBreath);
+            Breathing breath = new Breathing(breatingStartMsg, breatingEndMsg);
 
-            string reflectionStart = $"Welcome to the {activityType}, Please enter the amount of time you would like the activity to run for in seconds: \nThis activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.";
+            // Listeing class instantiation
+            string activityTypeListen = "Reflection Activity";
+            string listeingStartMsg = program.startMessage(activityTypeListen);
+            string listeingEndMsg = program.endMessage(activityTypeListen);
+            Breathing listeing = new Breathing(listeingStartMsg, listeingEndMsg);
+
+            // Reflection class instantiation
+            string activityTypeReflect = "Reflection Activity";
+            string reflectionStartMsg = program.startMessage(activityTypeReflect);
+            string reflectionEndMsg = program.endMessage(activityTypeReflect);
+            Breathing reflection = new Breathing(reflectionStartMsg, reflectionEndMsg);
 
             string listingStart = $"Welcome to the {activityType}, Please enter the amount of time you would like the activity to run for in seconds: \nThis activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
 
