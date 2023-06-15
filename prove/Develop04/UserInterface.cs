@@ -6,13 +6,17 @@ namespace Develop04
     {
         public void PrintMsg(string msg)
         {
-            // Prints msg with no required input
+            Console.WriteLine(msg);
         }
 
-        public void CollectInput(string msg)
+        public string CollectInputString(string msg)
         {
             // Collects response answers
             // Will return a string
+             Console.Write(msg);
+            string input = Console.ReadLine();
+            Console.WriteLine();
+            return input;
         }
 
         public int CollectInputInt(string msg)
@@ -27,7 +31,6 @@ namespace Develop04
 
         public int Menu()
         {
-
             // Console display
             Console.WriteLine("1. Start breathing activity.");
             Console.WriteLine("2. Start reflection activity.");
