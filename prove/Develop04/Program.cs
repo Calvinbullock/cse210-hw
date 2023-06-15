@@ -24,22 +24,25 @@ namespace Develop04
             UserInterface UI = new UserInterface();
             UI.Menu();
 
-            // Breating class instantiation
+            // sets end and start messages 
             string activityTypeBreath = "Reflection Activity";
             string breatingStartMsg = program.startMessage(activityTypeBreath);
             string breatingEndMsg = program.endMessage(activityTypeBreath);
+            // Breating class instantiation
             Breathing breath = new Breathing(breatingStartMsg, breatingEndMsg);
 
-            // Listeing class instantiation
+            // sets end and start messages 
             string activityTypeListen = "Reflection Activity";
             string listeingStartMsg = program.startMessage(activityTypeListen);
             string listeingEndMsg = program.endMessage(activityTypeListen);
+            // Listeing class instantiation
             Breathing listeing = new Breathing(listeingStartMsg, listeingEndMsg);
 
-            // Reflection class instantiation
+            // sets end and start messages 
             string activityTypeReflect = "Reflection Activity";
             string reflectionStartMsg = program.startMessage(activityTypeReflect);
             string reflectionEndMsg = program.endMessage(activityTypeReflect);
+            // Reflection class instantiation
             Breathing reflection = new Breathing(reflectionStartMsg, reflectionEndMsg);
 
             int exit = 0;
