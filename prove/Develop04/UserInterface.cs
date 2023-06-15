@@ -15,11 +15,14 @@ namespace Develop04
             // Will return a string
         }
 
-        public int CollectInput()
+        public int CollectInputInt(string msg)
         {
             // Will return an int
             // Collects duration responses
-            return 0;
+            Console.Write(msg);
+            int input = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            return input;
         }
 
         public int Menu()
