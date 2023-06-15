@@ -17,7 +17,7 @@ namespace Develop04
 
         public Activity() { }
 
-        public Activity(int duration, string startMessage, string endMessage, string reflection = "")
+        public Activity(string startMessage, string endMessage, int duration=0, string reflection = "")
         {
             _duration = duration;
             _reflection = reflection;
@@ -25,13 +25,13 @@ namespace Develop04
             _endMessage = endMessage;
         }
 
-        public void Animation()
+        public void Animation(int duration)
         {
             // Stores the animation.
             string[] animation = { "-", "\\", "|", "/", "-", "\\", "|", "//" };
             int count = 0;
 
-            while (count != _duration)
+            while (count != duration)
             {
                 foreach (string value in animation)
                 {
@@ -46,6 +46,12 @@ namespace Develop04
         public int GetDuration()
         {
             return _duration;
+        }
+
+        public void SetDuration(int duration)
+        {
+            _duration = duration;
+            Animation(3);
         }
 
         public string ShowStartMessage()

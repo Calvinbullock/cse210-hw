@@ -12,7 +12,7 @@ namespace Develop04
         private List<string> _responses;
 
         public Reflection(int duration, string reflection, string startMessage, string endMessage)
-                    : base(duration, reflection, startMessage, endMessage)
+                    : base(startMessage, endMessage)
         {
             _prompts = new List<string>()
             {
