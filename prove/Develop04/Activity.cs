@@ -74,9 +74,17 @@ namespace Develop04
             _reflection = reflection;
         }
 
-        public void StartTimer()
+        public int CheckTime()
         {
-            // Keeps track of the time??
+            // returns 1 times up, 
+            // return 0 times not up
+            DateTime currentTime = DateTime.Now;
+            if (currentTime < _endTime)
+            {
+                return 1;
+            }
+
+            return 0;
         }
     }
 }
