@@ -39,13 +39,29 @@ namespace Develop04
             string reflectionEndMsg = program.endMessage(activityTypeReflect);
             Breathing reflection = new Breathing(reflectionStartMsg, reflectionEndMsg);
 
-            string listingStart = $"Welcome to the {activityType}, Please enter the amount of time you would like the activity to run for in seconds: \nThis activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
+            int exit = 0;
+            while (exit == 0)
+            {
+                int input = UI.Menu();
 
+                // Launches the chosen activity 
+                switch (input)
+                {
+                    case 1: // breathing
+                        break;
 
+                    case 2: // reflection
+                        break;
 
-            Activity act = new Activity(1, breatingStart, "");
+                    case 3: // listing
+                        break;
 
-            act.Animation();
+                    case 4: // quite
+                        exit = 0;
+                        break;
+
+                }
+            }
         }
     }
 }
