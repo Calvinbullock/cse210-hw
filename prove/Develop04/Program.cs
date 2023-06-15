@@ -2,6 +2,19 @@ namespace Develop04
 {
     class Program
     {
+
+        private string startMessage(string activityType)
+        {
+            string startMsg = $"Welcome to the {activityType}, Please enter the amount of time you would like the activity to run for in seconds: \nThis activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
+            return startMsg;
+        }
+
+        private string endMessage(string activityType)
+        {
+            string endMsg = $" Well done. \nYou have completed a {activityType}.";
+            return endMsg;
+        }
+
         static void Main(string[] args)
         {
             string activityType = "";
