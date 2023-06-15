@@ -10,28 +10,29 @@ namespace Develop04
 
         private string _reflection;
 
-        private string _startMessage;
+        private string _activityDescription;
 
         private string _endMessage;
 
 
         public Activity() { }
 
-        public Activity(string startMessage, string endMessage, int duration=0, string reflection = "")
+        public Activity(string activityDescription, string endMessage, int duration = 0, string reflection = "")
         {
             _duration = duration;
             _reflection = reflection;
-            _startMessage = startMessage;
+            _activityDescription = activityDescription;
             _endMessage = endMessage;
         }
 
-        public void Animation(int duration)
+        public void Animation(int runtime)
         {
             // Stores the animation.
-            string[] animation = { "-", "\\", "|", "/", "-", "\\", "|", "//" };
+            // the animation has a base time of 4 seconds to complete
+            string[] animation = { "-", "\\", "|", "/" };
             int count = 0;
 
-            while (count != duration)
+            while (count != runtime)
             {
                 foreach (string value in animation)
                 {
@@ -51,12 +52,11 @@ namespace Develop04
         public void SetDuration(int duration)
         {
             _duration = duration;
-            Animation(3);
         }
 
-        public string ShowStartMessage()
+        public string GetActivityDescription()
         {
-            return _startMessage;
+            return _activityDescription;
         }
 
         public string ShowEndMessage()
