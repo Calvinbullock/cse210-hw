@@ -13,7 +13,7 @@ namespace Develop04
         {
             // Collects response answers
             // Will return a string
-             Console.Write(msg);
+            Console.Write(msg);
             string input = Console.ReadLine();
             Console.WriteLine();
             return input;
