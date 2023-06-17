@@ -69,20 +69,32 @@ namespace Develop04
             return duration;
         }
 
+        public void ExitMSG()
+        {
+            // Congragulate the user for completed activity
+            Console.WriteLine("Well Done!");
+            Animation(5);
+        }
+
         // ------- ------- Activity Runs ------- ------- \\ 
 
         public void RunListening(Listening listening)
         {
+            // Welcome and description messages
             int duration = BuildStartMessage("listening", listening.GetActivityDescription());
             listening.SetDuration(duration);
 
+            // Activity instructions
             Console.WriteLine("  List as many response as you can,:");
             Console.WriteLine("Hit enter to move to the next response.");
             Console.WriteLine("---------------------------------------");
             Animation(5);
+
+            // Print question then wait for user to be ready
             listening.GetQuestion();
             Console.WriteLine("Hit enter when ready.");
 
+            // Let user enter responses as long as time isn't up
             while (listening.CheckTime() != 1)
             {
                 Console.Write("> ");
@@ -90,8 +102,6 @@ namespace Develop04
                 listening.StoreResponse(response);
             }
 
-            Console.WriteLine("Well Done!");
-            Animation(5);
         }
 
         public void RunBreathing(Breathing breath)
@@ -122,7 +132,9 @@ namespace Develop04
             }
         }
 
-        public void RunReflection(Reflection reflect) {
+        public void RunReflection(Reflection reflect)
+        {
+            // Welcome and description messages
             int duration = BuildStartMessage("reflection", reflect.GetActivityDescription());
             reflect.SetDuration(duration);
 
