@@ -90,7 +90,7 @@ namespace Develop04
             listening.SetDuration(duration);
 
             // Activity instructions
-            Console.WriteLine("  List as many response as you can,:");
+            Console.WriteLine("  List as many response as you can:");
             Console.WriteLine("Hit enter to move to the next response.");
             Console.WriteLine("---------------------------------------");
             Animation(2);
@@ -105,7 +105,6 @@ namespace Develop04
             // Let user enter responses as long as time isn't up
             while (listening.CheckTime() != 1)
             {
-                // ------------------------- BUG HERE -------------------------------------- BUG
                 Console.Write("> ");
                 string response = Console.ReadLine();
                 listening.StoreResponse(response);
