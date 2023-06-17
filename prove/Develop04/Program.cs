@@ -7,8 +7,6 @@ namespace Develop04
         {
             // ----------------- User Interface class instantiation ----------------- \\
             UserInterface UI = new UserInterface();
-            UI.Menu();
-
 
             // ----------------- Breating class instantiation ----------------- \\
             string breathingDescription = "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
