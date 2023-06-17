@@ -1,3 +1,5 @@
+using System;
+
 namespace Develop04
 {
     class Breathing : Activity
@@ -5,12 +7,8 @@ namespace Develop04
         private int _breathInTime;
         private int _breathOutTime;
 
-        public Breathing(string startMessage, string endMessage, int breathInTime=0, int breathOutTime=0, int duration=0)
-                    : base(startMessage, endMessage)
-        {
-            breathInTime = _breathInTime;
-            breathOutTime = _breathOutTime;
-        }
+        public Breathing(string description)
+                    : base(description) { }
 
         public int getBreathInTime()
         {
@@ -31,5 +29,6 @@ namespace Develop04
         {
             _breathOutTime = breathOutTime;
         }
+
     }
 }

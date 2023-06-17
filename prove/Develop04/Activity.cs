@@ -1,6 +1,4 @@
 using System;
-using System.Threading;
-
 
 namespace Develop04
 {
@@ -15,38 +13,12 @@ namespace Develop04
 
         private string _activityDescription;
 
-        private string _endMessage;
-
 
         public Activity() { }
 
-        public Activity(string activityDescription, string endMessage, int duration = 0, string reflection = "")
+        public Activity(string activityDescription)
         {
-            _startTime = DateTime.Now;
-            _endTime = _startTime.AddSeconds(duration);
-            _duration = duration;
-            _reflection = reflection;
             _activityDescription = activityDescription;
-            _endMessage = endMessage;
-        }
-
-        public void Animation(int runtime)
-        {
-            // Stores the animation.
-            // the animation has a base time of 4 seconds to complete
-            string[] animation = { "-", "\\", "|", "/" };
-            int count = 0;
-
-            while (count != runtime)
-            {
-                foreach (string value in animation)
-                {
-                    Thread.Sleep(1000);
-                    Console.Write("\b");
-                    Console.Write(value);
-                }
-                count++;
-            }
         }
 
         public int GetDuration()
@@ -65,13 +37,15 @@ namespace Develop04
             return _activityDescription;
         }
 
-        public string ShowEndMessage()
-        {
-            return _endMessage;
-        }
         public void SetReflection(string reflection)
         {
             _reflection = reflection;
+        }
+
+        public void StartTimer()
+        {
+            _startTime = DateTime.Now;
+            _endTime = _startTime.AddSeconds(_duration);
         }
 
         public int CheckTime()
@@ -79,6 +53,9 @@ namespace Develop04
             // returns 1 times up, 
             // return 0 times not up
             DateTime currentTime = DateTime.Now;
+            Console.WriteLine(_startTime);
+            Console.WriteLine(currentTime);
+            Console.WriteLine(_endTime);
             if (currentTime < _endTime)
             {
                 return 1;

@@ -11,8 +11,8 @@ namespace Develop04
         private List<string> _questions;
         private List<string> _responses;
 
-        public Reflection(int duration, string reflection, string startMessage, string endMessage)
-                    : base(startMessage, endMessage)
+        public Reflection(string description)
+                    : base(description)
         {
             _prompts = new List<string>()
             {
