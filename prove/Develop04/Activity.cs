@@ -53,10 +53,8 @@ namespace Develop04
             // returns 1 times up, 
             // return 0 times not up
             DateTime currentTime = DateTime.Now;
-            Console.WriteLine(_startTime);
-            Console.WriteLine(currentTime);
-            Console.WriteLine(_endTime);
-            if (currentTime < _endTime)
+
+            if (currentTime > _endTime)
             {
                 return 1;
             }

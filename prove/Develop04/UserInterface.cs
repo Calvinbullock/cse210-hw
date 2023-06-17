@@ -159,6 +159,7 @@ namespace Develop04
             while (reflect.CheckTime() != 1)
             {
                 Console.WriteLine(reflect.ShowQuestion());
+                CountDown(5);
             }
         }
     }
