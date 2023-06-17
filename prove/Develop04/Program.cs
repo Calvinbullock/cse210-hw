@@ -25,7 +25,6 @@ namespace Develop04
             Reflection reflection = new Reflection(reflectionDescription);
 
 
-
             // ----------------- Program Run ----------------- \\
             int exit = 0;
             while (exit == 0)
