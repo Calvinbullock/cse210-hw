@@ -1,3 +1,4 @@
+using System;
 namespace Develop04
 {
     class Program
@@ -47,7 +48,6 @@ namespace Develop04
                     case 4: // quite
                         exit = 0;
                         break;
-
                 }
 
                 UI.ExitMSG();
