@@ -19,6 +19,8 @@ namespace Develop04
                 "When have you felt the Holy Ghost this month?",
                 "Who are some of your personal heroes?"
             };
+
+            _responses = new List<string> {};
         }
 
         public string GetQuestion()
