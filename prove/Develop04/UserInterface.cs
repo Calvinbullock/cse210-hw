@@ -59,8 +59,10 @@ namespace Develop04
         private int BuildStartMessage(string activityType, string activityDescription)
         {
             Console.WriteLine($"Welcome to the {activityType} activity.");
+            Console.WriteLine();
 
             Console.WriteLine(activityDescription);
+            Console.WriteLine();
 
             Console.Write("Please enter the amount of time you would like the activity to run for in intervales of 10 seconds: ");
             int duration = Convert.ToInt32(Console.ReadLine());
