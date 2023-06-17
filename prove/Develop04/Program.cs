@@ -1,4 +1,3 @@
-using System;
 namespace Develop04
 {
     class Program
@@ -6,13 +5,7 @@ namespace Develop04
 
         static void Main(string[] args)
         {
-            // ----------------- Program class instantiation ----------------- \\
-            // This is needed...
-            Program program = new Program();
-
-
             // ----------------- User Interface class instantiation ----------------- \\
-            // User interface class instatiation
             UserInterface UI = new UserInterface();
             UI.Menu();
 
@@ -52,7 +45,7 @@ namespace Develop04
 
                     case 3: // listing
                         // Prints out all parts of start message
-                        UI.RunListing(listening);
+                        UI.RunListening(listening);
                         break;
 
                     case 4: // quite
