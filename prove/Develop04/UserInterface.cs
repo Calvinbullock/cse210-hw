@@ -49,11 +49,9 @@ namespace Develop04
             for (int i = runtime; i > -1; i--)
             {
                 Thread.Sleep(1000);
-                Console.Write("\b");
                 Console.Write(i);
-            }
             Console.Write("\b");
-            Console.WriteLine();
+            }
             Console.WriteLine();
         }
 
