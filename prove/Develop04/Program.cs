@@ -52,7 +52,7 @@ namespace Develop04
 
                 }
 
-            UI.ExitMSG();
+                UI.ExitMSG();
             }
         }
     }
