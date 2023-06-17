@@ -50,7 +50,7 @@ namespace Develop04
             {
                 Thread.Sleep(1000);
                 Console.Write(i);
-            Console.Write("\b");
+                Console.Write("\b");
             }
             Console.WriteLine();
         }
@@ -134,6 +134,23 @@ namespace Develop04
             // Welcome and description messages
             int duration = BuildStartMessage("reflection", reflect.GetActivityDescription());
             reflect.SetDuration(duration);
+
+            // Show promt and wait for user to be ready
+            Console.WriteLine("Consder the following prompt");
+            Console.WriteLine($">> {reflect.ShowPrompt()}");
+            Console.Write("When you have some ideas in mind, press enter...");
+            Console.ReadLine();
+
+            // Count down tell avtivity start
+            Console.WriteLine("Answer each of the following questions as they relate to your experience.");
+            Console.Write("You may beigin in...");
+            CountDown(5);
+
+            // Show questions until time is up
+            while (reflect.CheckTime() != 1)
+            {
+                Console.WriteLine(reflect.ShowQuestion());
+            }
         }
     }
 }
