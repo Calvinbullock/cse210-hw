@@ -38,9 +38,9 @@ namespace Develop04
                     Console.Write(value);
                     Console.Write("\b");
                 }
-                Console.WriteLine();
                 count++;
             }
+            Console.WriteLine();
         }
 
         public void CountDown(int runtime)
@@ -68,7 +68,7 @@ namespace Develop04
             Console.Write("Please enter the amount of time you would like the activity to run for in intervales of 10 seconds: ");
             int duration = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
-            
+
             return duration;
         }
 
@@ -93,7 +93,7 @@ namespace Develop04
             Console.WriteLine("  List as many response as you can,:");
             Console.WriteLine("Hit enter to move to the next response.");
             Console.WriteLine("---------------------------------------");
-            Animation(5);
+            Animation(2);
             Console.Clear();
 
             // Print question then wait for user to be ready
@@ -105,6 +105,7 @@ namespace Develop04
             // Let user enter responses as long as time isn't up
             while (listening.CheckTime() != 1)
             {
+                // ------------------------- BUG HERE -------------------------------------- BUG
                 Console.Write("> ");
                 string response = Console.ReadLine();
                 listening.StoreResponse(response);
