@@ -13,6 +13,7 @@ namespace Develop04
             Console.WriteLine("3. Start listing activity.");
             Console.WriteLine("4. Quit.");
             Console.Write("Enter a number to select an option: ");
+
             int input = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
 
@@ -27,16 +28,15 @@ namespace Develop04
             int count = 0;
             Console.WriteLine("Just a moment...");
 
+            // loops trought the animation takes about 5 seconds
             while (count != runtime)
             {
                 foreach (string value in animation)
                 {
                     Thread.Sleep(1000);
-                    Console.Write("\b");
                     Console.Write(value);
+                    Console.Write("\b");
                 }
-                Console.Write("\b");
-                Console.WriteLine();
                 Console.WriteLine();
                 count++;
             }
@@ -67,6 +67,7 @@ namespace Develop04
             return duration;
         }
 
+        // the exit MSG show at teh end of all activities
         public void ExitMSG()
         {
             // Congragulate the user for completed activity
