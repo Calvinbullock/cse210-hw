@@ -5,7 +5,6 @@ namespace Develop04
 {
     class Listening : Activity
     {
-        private int _pauseTime;
         private List<string> _questions;
         private List<string> _responses;
 
