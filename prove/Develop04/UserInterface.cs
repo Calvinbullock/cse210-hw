@@ -16,6 +16,7 @@ namespace Develop04
 
             int input = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
+            Console.Clear();
 
             return input;
         }
@@ -66,6 +67,8 @@ namespace Develop04
 
             Console.Write("Please enter the amount of time you would like the activity to run for in intervales of 10 seconds: ");
             int duration = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+            
             return duration;
         }
 
