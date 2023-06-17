@@ -36,9 +36,11 @@ namespace Develop04
                 switch (activityChoice)
                 {
                     case 1: // breathing
+                        UI.RunBreathing(breath);
                         break;
 
                     case 2: // reflection
+                        UI.RunReflection(reflection);
                         break;
 
                     case 3: // listing
