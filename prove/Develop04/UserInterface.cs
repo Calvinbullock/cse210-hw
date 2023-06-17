@@ -72,7 +72,8 @@ namespace Develop04
         {
             // Congragulate the user for completed activity
             Console.WriteLine("Well Done!");
-            Animation(5);
+            Animation(1);
+            Console.Clear();
         }
 
         // ------- ------- ------- Activity Runs ------- ------- ------- \\ 
@@ -92,6 +93,8 @@ namespace Develop04
             // Print question then wait for user to be ready
             listening.GetQuestion();
             Console.WriteLine("Hit enter when ready.");
+
+            listening.StartTimer();
 
             // Let user enter responses as long as time isn't up
             while (listening.CheckTime() != 1)
@@ -146,6 +149,8 @@ namespace Develop04
             Console.WriteLine("Answer each of the following questions as they relate to your experience.");
             Console.Write("You may beigin in...");
             CountDown(5);
+
+            reflect.StartTimer();
 
             // Show questions until time is up
             while (reflect.CheckTime() != 1)
