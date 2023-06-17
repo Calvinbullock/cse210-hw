@@ -1,5 +1,3 @@
-using System;
-
 namespace Develop04
 {
     class Breathing : Activity

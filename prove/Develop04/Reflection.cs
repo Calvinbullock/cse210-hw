@@ -6,6 +6,7 @@ namespace Develop04
     class Reflection : Activity
     {
         private List<string> _prompts;
+
         private List<string> _questions;
 
         public Reflection(string description)
@@ -35,7 +36,7 @@ namespace Develop04
 
         public string ShowPrompt()
         {
-            // Creats a random number to get a randome index
+            // Creates a random number to get a randome index
             // From _prompts then returns the index as a string.
             Random rnd = new Random();
             int randNum = rnd.Next(_prompts.Count);
@@ -48,11 +49,6 @@ namespace Develop04
             Random rnd = new Random();
             int randNum = rnd.Next(_questions.Count);
             return _questions[randNum];
-        }
-
-        public void StoreResponse(string answer)
-        {
-
         }
 
         public string GetResponse(int index)
