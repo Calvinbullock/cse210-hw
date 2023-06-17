@@ -51,6 +51,8 @@ namespace Develop04
                         break;
 
                 }
+
+            UI.ExitMSG();
             }
         }
     }
