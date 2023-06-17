@@ -71,7 +71,7 @@ namespace Develop04
 
         // ------- ------- Activity Runs ------- ------- \\ 
 
-        public void RunListing(Listening listening)
+        public void RunListening(Listening listening)
         {
             int duration = BuildStartMessage("listening", listening.GetActivityDescription());
             listening.SetDuration(duration);
@@ -96,6 +96,8 @@ namespace Develop04
 
         public void RunBreathing(Breathing breath)
         {
+            int duration = BuildStartMessage("breathing", breath.GetActivityDescription());
+            breath.SetDuration(duration);
 
             // set the breating in / out times each is half of the total time
             int breathInOut = breath.GetDuration() / 2;
@@ -116,6 +118,12 @@ namespace Develop04
                 Console.Write("Breath Out... ");
                 this.CountDown(5);
             }
+        }
+
+        public void RunReflection(Reflection reflect) {
+            int duration = BuildStartMessage("reflection", reflect.GetActivityDescription());
+            reflect.SetDuration(duration);
+
         }
     }
 }
