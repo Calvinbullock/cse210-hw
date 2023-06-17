@@ -96,27 +96,29 @@ namespace Develop04
 
         public void RunBreathing(Breathing breath)
         {
+            // Welcome and description messages
             int duration = BuildStartMessage("breathing", breath.GetActivityDescription());
             breath.SetDuration(duration);
 
-            // set the breating in / out times each is half of the total time
-            int breathInOut = breath.GetDuration() / 2;
-            breath.setBreathInTime(breathInOut);
-            breath.setBreathOutTime(breathInOut);
-            Animation(2);
+            // Set the breating in and out times
+            breath.setBreathInTime(5);
+            breath.setBreathOutTime(5);
+            Animation(1);
 
+            // Give them a warning the activity is about to start
             Console.WriteLine("Get ready...");
             Console.WriteLine();
 
             breath.StartTimer();
 
+            // Run the activity until time is up
             while (breath.CheckTime() != 1)
             {
                 Console.Write("Breath In... ");
-                this.CountDown(5);
+                CountDown(5);
 
                 Console.Write("Breath Out... ");
-                this.CountDown(5);
+                CountDown(5);
             }
         }
 
