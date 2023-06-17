@@ -5,11 +5,8 @@ namespace Develop04
 {
     class Reflection : Activity
     {
-        // Overrides Duration
-        // PauseTime
         private List<string> _prompts;
         private List<string> _questions;
-        private List<string> _responses;
 
         public Reflection(string description)
                     : base(description)
