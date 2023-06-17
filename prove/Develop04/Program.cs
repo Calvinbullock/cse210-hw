@@ -36,15 +36,12 @@ namespace Develop04
                 switch (activityChoice)
                 {
                     case 1: // breathing
-                        // Prints out all parts of start message
                         break;
 
                     case 2: // reflection
-                        // Prints out all parts of start message
                         break;
 
                     case 3: // listing
-                        // Prints out all parts of start message
                         UI.RunListening(listening);
                         break;
 
