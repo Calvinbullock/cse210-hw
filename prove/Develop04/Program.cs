@@ -51,7 +51,7 @@ namespace Develop04
 
                     case 4: // quite
                         exit = 1;
-                        UI.ExitMSG();
+                        UI.GoodByeMSG();
                         break;
                 }
             }
