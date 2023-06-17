@@ -101,7 +101,6 @@ namespace Develop04
                 string response = Console.ReadLine();
                 listening.StoreResponse(response);
             }
-
         }
 
         public void RunBreathing(Breathing breath)
@@ -137,7 +136,6 @@ namespace Develop04
             // Welcome and description messages
             int duration = BuildStartMessage("reflection", reflect.GetActivityDescription());
             reflect.SetDuration(duration);
-
         }
     }
 }
