@@ -72,7 +72,11 @@ namespace Develop04
             return duration;
         }
 
-        // the exit MSG show at teh end of all activities
+        public void GoodByeMSG() {
+            Console.WriteLine("Good Bye and I hope this helped you in some way.");
+        }
+
+        // The exit MSG that shows at the end of all activities
         public void ExitMSG()
         {
             // Congragulate the user for completed activity

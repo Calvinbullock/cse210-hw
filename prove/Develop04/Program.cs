@@ -35,22 +35,25 @@ namespace Develop04
                 {
                     case 1: // breathing
                         UI.RunBreathing(breath);
+                        UI.ExitMSG();
+
                         break;
 
                     case 2: // reflection
                         UI.RunReflection(reflection);
+                        UI.ExitMSG();
                         break;
 
                     case 3: // listing
                         UI.RunListening(listening);
+                        UI.ExitMSG();
                         break;
 
                     case 4: // quite
-                        exit = 0;
+                        exit = 1;
+                        UI.ExitMSG();
                         break;
                 }
-
-                UI.ExitMSG();
             }
         }
     }
