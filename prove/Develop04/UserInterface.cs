@@ -89,6 +89,7 @@ namespace Develop04
             Console.WriteLine("Hit enter to move to the next response.");
             Console.WriteLine("---------------------------------------");
             Animation(5);
+            Console.Clear();
 
             // Print question then wait for user to be ready
             listening.GetQuestion();
@@ -115,6 +116,7 @@ namespace Develop04
             breath.setBreathInTime(5);
             breath.setBreathOutTime(5);
             Animation(1);
+            Console.Clear();
 
             // Give them a warning the activity is about to start
             Console.WriteLine("Get ready...");
@@ -144,6 +146,7 @@ namespace Develop04
             Console.WriteLine($">> {reflect.ShowPrompt()}");
             Console.Write("When you have some ideas in mind, press enter...");
             Console.ReadLine();
+            Console.Clear();
 
             // Count down tell avtivity start
             Console.WriteLine("Answer each of the following questions as they relate to your experience.");
