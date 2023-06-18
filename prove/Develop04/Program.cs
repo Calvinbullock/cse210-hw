@@ -14,9 +14,9 @@ namespace Develop04
             Breathing breath = new Breathing(breathingDescription);
 
 
-            // ----------------- Listening class instantiation ----------------- \\
-            string listeningDescription = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
-            Listening listening = new Listening(listeningDescription);
+            // ----------------- Listing class instantiation ----------------- \\
+            string listingDescription = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
+            Listing listing = new Listing(listingDescription);
 
 
             // ----------------- Reflection class instantiation ----------------- \\
@@ -45,7 +45,7 @@ namespace Develop04
                         break;
 
                     case 3: // listing
-                        UI.RunListening(listening);
+                        UI.RunListing(listing);
                         UI.ExitMSG();
                         break;
 

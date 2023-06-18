@@ -87,11 +87,11 @@ namespace Develop04
 
         // ------- ------- ------- Activity Runs ------- ------- ------- \\ 
 
-        public void RunListening(Listening listening)
+        public void RunListing(Listing listing)
         {
             // Welcome and description messages
-            int duration = BuildStartMessage("listening", listening.GetActivityDescription());
-            listening.SetDuration(duration);
+            int duration = BuildStartMessage("listing", listing.GetActivityDescription());
+            listing.SetDuration(duration);
 
             // Activity instructions
             Console.WriteLine("  List as many response as you can:");
@@ -101,17 +101,17 @@ namespace Develop04
             Console.Clear();
 
             // Print question then wait for user to be ready
-            listening.GetQuestion();
+            listing.GetQuestion();
             Console.WriteLine("Hit enter when ready.");
 
-            listening.StartTimer();
+            listing.StartTimer();
 
             // Let user enter responses as long as time isn't up
-            while (listening.CheckTime() != 1)
+            while (listing.CheckTime() != 1)
             {
                 Console.Write("> ");
                 string response = Console.ReadLine();
-                listening.StoreResponse(response);
+                listing.StoreResponse(response);
             }
         }
 

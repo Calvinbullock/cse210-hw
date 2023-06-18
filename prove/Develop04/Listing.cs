@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace Develop04
 {
-    class Listening : Activity
+    class Listing : Activity
     {
         private List<string> _questions;
         private List<string> _responses;
 
-        public Listening(string startMessage)
+        public Listing(string startMessage)
                     : base(startMessage)
         {
             _questions = new List<string>
