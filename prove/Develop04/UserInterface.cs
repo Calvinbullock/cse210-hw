@@ -113,6 +113,8 @@ namespace Develop04
                 string response = Console.ReadLine();
                 listing.StoreResponse(response);
             }
+
+            Console.WriteLine($"You listed {listing.GetResponsesNumber()} items");
         }
 
         public void RunBreathing(Breathing breath)

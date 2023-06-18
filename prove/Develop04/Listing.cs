@@ -35,5 +35,9 @@ namespace Develop04
         {
             _responses.Add(response);
         }
+
+        public int GetResponsesNumber() {
+            return _responses.Count;
+        }
     }
 }
