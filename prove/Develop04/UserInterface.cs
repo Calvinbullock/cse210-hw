@@ -72,7 +72,8 @@ namespace Develop04
             return duration;
         }
 
-        public void GoodByeMSG() {
+        public void GoodByeMSG()
+        {
             Console.WriteLine("Good Bye and I hope this helped you in some way.");
         }
 
