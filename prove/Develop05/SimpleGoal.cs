@@ -2,7 +2,8 @@ namespace Develop05
 {
     class SimpleGoal : Goal
     {
-        int completions;
+        private int completionsNeeded;
+        private int completionsTotal;
 
         public override void RecordProgress()
         {

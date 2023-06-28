@@ -2,11 +2,11 @@ namespace Develop05
 {
     class Goal
     {
-        // List<string>;
-        string nameOfGoal;
-        string description;
-        bool completed;
-        int pointValue;
+        //private List<string>;
+        private string nameOfGoal;
+        private string description;
+        private bool completed;
+        private int pointValue;
 
         public void AddGoal()
         {
