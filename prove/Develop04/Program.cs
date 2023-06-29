@@ -49,7 +49,7 @@ namespace Develop04
                         UI.ExitMSG();
                         break;
 
-                    case 4: // quite
+                    case 4: // quit
                         exit = 1;
                         UI.GoodByeMSG();
                         break;
