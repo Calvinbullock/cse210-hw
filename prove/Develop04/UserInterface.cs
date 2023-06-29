@@ -24,7 +24,7 @@ namespace Develop04
         public void Animation(int runtime)
         {
             // Stores the animation.
-            // the animation has a base time of 4 seconds to complete
+            //      the animation has a base time of 4 seconds to complete
             string[] animation = { "-", "\\", "|", "/" };
             int count = 0;
             Console.WriteLine("Just a moment...");
@@ -46,7 +46,7 @@ namespace Develop04
         public void CountDown(int runtime)
         {
             // Stores the animation.
-            // the animation has a base time of 4 seconds to complete
+            //      the animation has a base time of 4 seconds to complete
             for (int i = runtime; i > -1; i--)
             {
                 Thread.Sleep(1000);
