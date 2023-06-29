@@ -53,6 +53,14 @@ namespace Develop05
 
         public List<Goal> ReadFromFile(string fileName)
         {
+            /* =======================================================*\
+            ||This pulls data from a file and puts it into goals list ||
+            ||      the returns that list.                            ||
+            ||                                                        ||
+            || Paramiters:                                            ||
+            ||      String: the name of the file you want to write    ||
+            ||                  From.                                 ||
+            \*========================================================*/
             string fileContent = "";
             string[] lines = { };
             List<string> subStr = new List<string>();
