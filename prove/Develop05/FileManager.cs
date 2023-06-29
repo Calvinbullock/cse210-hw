@@ -117,7 +117,6 @@ namespace Develop05
             }
             // Return the file contents as a string DEBUG
             return fileContent;
-
         }
     }
 }
