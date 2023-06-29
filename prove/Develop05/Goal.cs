@@ -5,7 +5,8 @@ namespace Develop05
         private string _nameOfGoal;
         private string _description;
         private int _pointValue;
-        private string _completed = " ";
+        private bool _completedValue = false;
+        private string _completedValueString = "[ ]";
 
         public Goal(string nameOfGoal, string description, int pointValue)
         {
@@ -27,7 +28,7 @@ namespace Develop05
         public string Display()
         {
             // Displays a formatted string containing “nameOfGoal” and “description”
-            return $"[{_completed}] {_nameOfGoal} ({_description})";
+            return $"[{_completedValue}] {_nameOfGoal} ({_description})";
         }
 
         public string GetNameOfGoal()
@@ -38,6 +39,34 @@ namespace Develop05
         public string GetGoalDescription()
         {
             return _description;
+        }
+
+        public bool GetCompletionValue()
+        {
+            return _completedValue;
+        }
+
+        public string GetCompletionString()
+        {
+            return _completedValueString;
+        }
+
+        public void SetCompletionValue(bool completed)
+        {
+            _completedValue = completed;
+            if (completed)
+            {
+                _completedValueString = "[*]";
+            }
+            else
+            {
+                _completedValueString = "[ ]";
+            }
+        }
+
+        public int GetPointValue()
+        {
+            return _pointValue;
         }
     }
 }
