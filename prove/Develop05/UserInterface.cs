@@ -90,5 +90,10 @@ namespace Develop05
 
         }
 
+        public void GoodByeMsg()
+        {
+            Console.WriteLine("Good Bye");
+        }
+
     }
 }

@@ -40,6 +40,8 @@ namespace Develop05
                         break;
 
                     case 6: // quit
+                        exit = 1;
+                        UI.GoodByeMsg();
                         break;
                 }
             }
