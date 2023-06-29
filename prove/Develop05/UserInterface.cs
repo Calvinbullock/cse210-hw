@@ -62,12 +62,13 @@ namespace Develop05
             if (input == 1)
             {
                 SimpleGoal simpGoal = new SimpleGoal(3, name, description, points);
-                _goals.Add(simpGoal);
+                Console.WriteLine($"Bot-----{simpGoal}");
+                _goals.Add(simpGoal); // TODO Broken.... object issues?
             }
             else
             {
                 EteralGoal EGoal = new EteralGoal(name, description, points);
-                _goals.Add(EGoal);
+                _goals.Add(EGoal); // TODO Broken.... object issues?
             }
         }
 
@@ -111,6 +112,5 @@ namespace Develop05
         {
             Console.WriteLine("Good Bye");
         }
-
     }
 }
