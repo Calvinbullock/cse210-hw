@@ -96,7 +96,7 @@ namespace Develop05
             {
                 // Breaks sub up into groups of 3 starting with 0 
                 //      Logic is every odd that is not direcly divisable by 4 is the last 
-                //      in teh groupe of three
+                //      in the group of three
                 if (count % 2 == 0 && count % 4 != 0)
                 {
 
