@@ -7,6 +7,8 @@ namespace Develop05
     {
         private List<Goal> _goals;
 
+        private int _totalScore = 0;
+
         public int Menu()
         {
             // Console display
@@ -87,7 +89,22 @@ namespace Develop05
 
         public void RecordEvent()
         {
+            ListGoals();
 
+            Console.WriteLine();
+            Console.Write("Whitch Goal did you acomplish?:  ");
+            int goalNum = Convert.ToInt32(Console.ReadLine());
+
+            // Change goalNum (user input) to index value
+            goalNum--;
+
+            // Interact with choosen instance of Goal
+            _goals[goalNum].SetCompletionValue(true);
+            int pointsValue = _goals[goalNum].GetPointValue();
+            _totalScore += pointsValue;
+            
+            Console.WriteLine();
+            Console.WriteLine($"{pointsValue}");
         }
 
         public void GoodByeMsg()
