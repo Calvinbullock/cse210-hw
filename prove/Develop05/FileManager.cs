@@ -10,6 +10,10 @@ namespace Develop05
     ///</summary> 
     class FileManager
     {
+        // TODO -- Probably a better way to so this....
+        //      I need to store this so I can return it sepret from the array of goals.
+        private int _totalScoreFromFile;
+
         public FileManager() { }
         public void SaveToFile(List<Goal> goals, int score, string fileName)
         {
@@ -117,6 +121,13 @@ namespace Develop05
             }
             // Return the file contents as a string DEBUG
             return goals;
+        }
+
+        public int GetTotalScore()
+        {
+            // Can't return this from the ReadFromFile Method
+            //      so I retturn it from a sepret method
+            return _totalScoreFromFile;
         }
     }
 }

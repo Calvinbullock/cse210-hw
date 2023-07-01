@@ -103,6 +103,7 @@ namespace Develop05
             string FileName = Console.ReadLine();
 
             _goals = fileMan.ReadFromFile(FileName);
+            _totalScore = fileMan.GetTotalScore();
         }
 
         public void RecordEvent()
