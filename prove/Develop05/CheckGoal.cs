@@ -36,9 +36,9 @@ namespace Develop05
             return $"{this.GetCompletionString()} {this.GetNameOfGoal()} ({this.GetGoalDescription()}) -- currently completed {_achivedCompletions}/{_completionsNeeded}";
         }
 
-        public string GetStorageString()
+        public override string GetStorageString()
         {
-            return $"{_completionsNeeded}|{_achivedCompletions}|{_bonuesPointsAmt}";
+            return $"{this.GetNameOfGoal()}|{this.GetGoalDescription()}|{this.GetCompletionValue()}|{this.GetCompletionValue()}|{_completionsNeeded}|{_achivedCompletions}|{_bonuesPointsAmt}";
         }
     }
 }
