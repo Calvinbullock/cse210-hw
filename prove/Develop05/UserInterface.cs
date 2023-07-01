@@ -94,7 +94,7 @@ namespace Develop05
             Console.Write("What would you like to name you goal file: ");
             string FileName = Console.ReadLine();
 
-            fileMan.SaveToFile(_goals, FileName);
+            fileMan.SaveToFile(_goals, _totalScore, FileName);
         }
 
         public void LoadGoals(FileManager fileMan)

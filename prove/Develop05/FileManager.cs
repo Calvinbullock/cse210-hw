@@ -11,7 +11,7 @@ namespace Develop05
     class FileManager
     {
         public FileManager() { }
-        public void SaveToFile(List<Goal> goals, string fileName)
+        public void SaveToFile(List<Goal> goals, int score, string fileName)
         {
             /* =======================================================*\
             ||This function wirtes a list of goals to a file.         ||
@@ -26,22 +26,14 @@ namespace Develop05
                 // Open the File
                 StreamWriter stream = new StreamWriter(fileName, true, Encoding.ASCII);
 
+                // Saves points at top of file
+                string scoreString = score + "";
+                stream.WriteLine(scoreString);
+
                 // loops throught list to dump it all to one file
                 foreach (Goal goal in goals)
                 {
-                    string name = goal.GetNameOfGoal();
-                    string description = goal.GetGoalDescription();
-                    int pointValue = goal.GetPointValue();
-                    bool isCompleted = goal.GetCompletionValue();
-
-                    // Need to formate how all the goals areTODO dumped to the file
-                    string content = $"{name}|{description}|{pointValue}|{isCompleted}";
-
-                    if (goal is CheckGoal)
-                    {
-                        goal.GetStorageString(); // TODO write a function for each Object...
-
-                    }
+                    string content = goal.GetStorageString();
 
                     // Writes content to file
                     stream.WriteLine(content);
