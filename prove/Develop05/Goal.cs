@@ -32,10 +32,10 @@ namespace Develop05
             }
         }
 
-        public string Display()
+        public virtual string Display()
         {
             // Displays a formatted string containing “nameOfGoal” and “description”
-            return $"[{_completedValue}] {_nameOfGoal} ({_description})";
+            return $"{_completedValueString} {_nameOfGoal} ({_description})";
         }
 
         public string GetNameOfGoal()
@@ -56,19 +56,6 @@ namespace Develop05
         public string GetCompletionString()
         {
             return _completedValueString;
-        }
-
-        public void SetCompletionValue(bool completed)
-        {
-            _completedValue = completed;
-            if (completed)
-            {
-                _completedValueString = "[*]";
-            }
-            else
-            {
-                _completedValueString = "[ ]";
-            }
         }
 
         public int GetPointValue()
