@@ -15,14 +15,21 @@ namespace Develop05
             _nameOfGoal = nameOfGoal;
         }
 
-        public void AddGoal()
-        {
-            // Add a goal and description to the list
-        }
+        public abstract int RecordProgress(bool completed);
+        
 
-        public virtual void RecordProgress()
+        public virtual void SetCompletion(bool completed)
         {
-            // Changes the boolean parameter “completed” / other things depending on child class
+            _completedValue = completed;
+
+            if (completed)
+            {
+                _completedValueString = "[*]";
+            }
+            else
+            {
+                _completedValueString = "[ ]";
+            }
         }
 
         public string Display()

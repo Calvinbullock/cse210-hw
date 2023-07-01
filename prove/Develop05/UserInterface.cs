@@ -100,12 +100,11 @@ namespace Develop05
             goalNum--;
 
             // Interact with choosen instance of Goal
-            _goals[goalNum].SetCompletionValue(true);
-            int pointsValue = _goals[goalNum].GetPointValue();
+            int pointsValue = _goals[goalNum].RecordProgress(true);
+            Console.Write($"DEBUG {pointsValue}"); // DEBUG -- not giveing the return of right points amnt
             _totalScore += pointsValue;
-            
+
             Console.WriteLine();
-            Console.WriteLine($"{pointsValue}");
         }
 
         public void GoodByeMsg()

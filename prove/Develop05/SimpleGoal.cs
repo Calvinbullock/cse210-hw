@@ -11,15 +11,11 @@ namespace Develop05
             _completionsNeeded = completionsNeeded;
         }
 
-        public override void RecordProgress()
+        public override int RecordProgress(bool completed)
         {
             // Changes the boolean parameter “completed” / other things depending on child class
-        }
-
-        public void PartialPoints()
-        {
-            // Gives partial points based on how many times they have RecodedProgress()
-
+            this.SetCompletion(completed);
+            return this.GetPointValue();
         }
     }
 }
