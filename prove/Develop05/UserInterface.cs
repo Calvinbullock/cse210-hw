@@ -5,12 +5,14 @@ namespace Develop05
 {
     class UserInterface
     {
-        private List<Goal> _goals;
+        private List<Goal> _goals = new List<Goal>();
 
         private int _totalScore = 0;
 
         public int Menu()
         {
+            Console.WriteLine($"You have {_totalScore} points.\n");
+
             // Console display
             Console.WriteLine("Menu Items");
             Console.WriteLine("  1. Create New Goal");
