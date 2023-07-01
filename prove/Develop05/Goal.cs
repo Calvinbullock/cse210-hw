@@ -5,18 +5,31 @@ namespace Develop05
         private string _nameOfGoal;
         private string _description;
         private int _pointValue;
-        private bool _isCompleted = false;
-        private string _completedValueString = "[ ]";
+        private bool _isCompleted;
+        private string _completedValueString;
 
         public Goal(string nameOfGoal, string description, int pointValue)
         {
             _description = description;
             _pointValue = pointValue;
             _nameOfGoal = nameOfGoal;
+            _completedValueString = "[ ]";
+            _isCompleted = false;
         }
 
+        public Goal(string nameOfGoal, string description, int pointValue, bool isCompleted)
+        {
+            _description = description;
+            _pointValue = pointValue;
+            _nameOfGoal = nameOfGoal;
+            _isCompleted = isCompleted;
+            _completedValueString = "[ ]";
+            _isCompleted = false;
+        }
+
+
         public abstract int RecordProgress(bool completed);
-        
+
 
         public virtual void SetCompletion(bool completed)
         {
@@ -38,10 +51,7 @@ namespace Develop05
             return $"{_completedValueString} {_nameOfGoal} ({_description})";
         }
 
-        public virtual string GetStorageString()
-        {
-            return $"{_nameOfGoal}|{_description}|{_pointValue}|{_isCompleted}*";
-        }
+        public abstract string GetStorageString();
 
         public string GetNameOfGoal()
         {
