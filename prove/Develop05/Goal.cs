@@ -40,7 +40,7 @@ namespace Develop05
 
         public virtual string GetStorageString()
         {
-            return $"{_nameOfGoal}|{_description}|{_pointValue}|{_isCompleted}";
+            return $"{_nameOfGoal}|{_description}|{_pointValue}|{_isCompleted}*";
         }
 
         public string GetNameOfGoal()

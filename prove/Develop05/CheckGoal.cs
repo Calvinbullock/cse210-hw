@@ -38,7 +38,7 @@ namespace Develop05
 
         public override string GetStorageString()
         {
-            return $"{this.GetNameOfGoal()}|{this.GetGoalDescription()}|{this.GetCompletionValue()}|{this.GetCompletionValue()}|{_completionsNeeded}|{_achivedCompletions}|{_bonuesPointsAmt}";
+            return $"{this.GetNameOfGoal()}|{this.GetGoalDescription()}|{this.GetCompletionValue()}|{this.GetCompletionValue()}|{_completionsNeeded}|{_achivedCompletions}|{_bonuesPointsAmt}*";
         }
     }
 }
