@@ -14,6 +14,15 @@ namespace Develop05
             _achivedCompletions = 0;
         }
 
+        public CheckGoal(int bonuesPointsAmt, int completionsNeeded, int achivedCompletions, string nameOfGoal, string description, int pointValue, bool isCompleted) :
+                base(nameOfGoal, description, pointValue, isCompleted)
+        {
+            _achivedCompletions = achivedCompletions;
+            _completionsNeeded = completionsNeeded;
+            _bonuesPointsAmt = bonuesPointsAmt;
+            _achivedCompletions = 0;
+        }
+
         public override int RecordProgress(bool completed)
         {
             // Changes the boolean parameter “completed” / other things depending on child class
@@ -38,7 +47,8 @@ namespace Develop05
 
         public override string GetStorageString()
         {
-            return $"{this.GetNameOfGoal()}|{this.GetGoalDescription()}|{this.GetCompletionValue()}|{this.GetCompletionValue()}|{_completionsNeeded}|{_achivedCompletions}|{_bonuesPointsAmt}*";
+            return $"3|{this.GetNameOfGoal()}|{this.GetGoalDescription()}|{this.GetPointValue()}|{this.GetCompletionValue()}|{_completionsNeeded}|{_achivedCompletions}|{_bonuesPointsAmt}";
         }
+        
     }
 }
