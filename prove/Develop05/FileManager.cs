@@ -63,11 +63,8 @@ namespace Develop05
             ||      String: the name of the file you want to write    ||
             ||                  From.                                 ||
             \*========================================================*/
-            string fileContent = "";
             string[] lines = { };
-            List<string> subStr = new List<string>();
             List<Goal> goals = new List<Goal>();
-
 
             // Open the file or throws an error msg
             try
@@ -79,47 +76,80 @@ namespace Develop05
                 Console.WriteLine("File did not open." + except.Message);
             }
 
-            // Might be redundent loop TODO - Might be better way
-            //      Loop through Lines and parse into one long string
+            // Allows first line to be skiped 
+            bool firstIteration = true;
+
+            // Parses lines into substrings data.
             foreach (string line in lines)
             {
-                fileContent += line + "\n"; // TODO get ride of \n?
-            }
+                List<string> dataList = new List<string>();
 
-            // TODO -------- -------- Change this split to CSV formate -------- -------- TODO
-            // Parses FileContent into substrings
-            foreach (string index in fileContent.Split(':', StringSplitOptions.RemoveEmptyEntries))
-            {
-                // Adds the broken string bits to list nambe substr
-                subStr.Add(index);
-            }
-
-            // Stores the parsed file content to new entries then to journal
-            int count = 0;
-            while (count < subStr.Count)
-            {
-                // Breaks sub up into groups of 3 starting with 0 
-                //      Logic is every odd that is not direcly divisable by 4 is the last 
-                //      in the group of three
-                if (count % 2 == 0 && count % 4 != 0)
+                // TODO maybe make a local function here....
+                // Adds the broken string bits to list named substr
+                foreach (string dataPart in line.Split('|', StringSplitOptions.RemoveEmptyEntries))
                 {
-
-                    // { TODO -------- This needs to be updated
-                    // Creates new Entry instance
-                    // Entry yourEntry = new Entry();
-
-                    // Store the entries in journal
-                    // yourEntry.Store(subStr[count - 1], subStr[count], subStr[count - 2]);
-                    // journal.StoreEntry(yourEntry);
-                    // }
-
-                    // To skip the empty entry in sub - TODO clean out the empty new linr
-                    count++;
+                    dataList.Add(dataPart);
+                    Console.WriteLine("93," + dataPart);
                 }
-                // Normal count iteration
-                count++;
+                Console.WriteLine("96," + dataList.Count);
+
+                // Goals data ready
+                int goalType;
+                int pointValue;
+                bool isCompleted;
+                string nameOfGoal;
+                string description;
+
+                // Parses the goal type indicater
+                goalType = Convert.ToInt32(dataList[0]);
+
+                if (firstIteration)
+                {
+                    // get the user score from first line of Goal storage file
+                    firstIteration = false;
+
+                    // Can't return this from the ReadFromFile Method
+                    //      so I retturn it from a sepret method
+                    _totalScoreFromFile = Convert.ToInt32(dataList[0]);
+                }
+                else if (goalType == 1) // Simple goal
+                {
+                    pointValue = Convert.ToInt32(dataList[3]);
+                    isCompleted = Convert.ToBoolean(dataList[4]);
+                    nameOfGoal = dataList[1];
+                    description = dataList[2];
+
+                    SimpleGoal simpGoal = new SimpleGoal(nameOfGoal, description, pointValue, isCompleted);
+                    goals.Add(simpGoal);
+                }
+                else if (goalType == 2) // Eternal goal
+                {
+                    pointValue = Convert.ToInt32(dataList[3]);
+                    isCompleted = Convert.ToBoolean(dataList[4]);
+                    nameOfGoal = dataList[1];
+                    description = dataList[2];
+
+                    EteralGoal EGoal = new EteralGoal(nameOfGoal, description, pointValue, isCompleted);
+                    goals.Add(EGoal);
+                }
+                else // Check List goal 
+                {
+                    pointValue = Convert.ToInt32(dataList[3]);
+                    isCompleted = Convert.ToBoolean(dataList[4]);
+                    nameOfGoal = dataList[1];
+                    description = dataList[2];
+
+                    int bonuesPointsAmt = Convert.ToInt32(dataList[7]);
+                    int completionsNeeded = Convert.ToInt32(dataList[5]);
+                    int achivedCompletions = Convert.ToInt32(dataList[6]);
+
+                    CheckGoal cGoal = new CheckGoal(bonuesPointsAmt, completionsNeeded, achivedCompletions, nameOfGoal, description, pointValue, isCompleted);
+                    goals.Add(cGoal);
+                }
+
             }
-            // Return the file contents as a string DEBUG
+
+            // Return the file contents as a string.
             return goals;
         }
 
