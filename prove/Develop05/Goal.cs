@@ -5,7 +5,7 @@ namespace Develop05
         private string _nameOfGoal;
         private string _description;
         private int _pointValue;
-        private bool _completedValue = false;
+        private bool _isCompleted = false;
         private string _completedValueString = "[ ]";
 
         public Goal(string nameOfGoal, string description, int pointValue)
@@ -20,7 +20,7 @@ namespace Develop05
 
         public virtual void SetCompletion(bool completed)
         {
-            _completedValue = completed;
+            _isCompleted = completed;
 
             if (completed)
             {
@@ -38,6 +38,11 @@ namespace Develop05
             return $"{_completedValueString} {_nameOfGoal} ({_description})";
         }
 
+        public virtual string GetStorageString()
+        {
+            return $"{_nameOfGoal}|{_description}|{_pointValue}|{_isCompleted}";
+        }
+
         public string GetNameOfGoal()
         {
             return _nameOfGoal;
@@ -50,7 +55,7 @@ namespace Develop05
 
         public bool GetCompletionValue()
         {
-            return _completedValue;
+            return _isCompleted;
         }
 
         public string GetCompletionString()
