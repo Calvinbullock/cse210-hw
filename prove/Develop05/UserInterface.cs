@@ -41,6 +41,7 @@ namespace Develop05
             Console.WriteLine("Would you like a:");
             Console.WriteLine("1. Simple Goal");
             Console.WriteLine("2. Eternal Goal");
+            Console.WriteLine("3. Check List Goal");
             Console.Write("Select a choice from the menu: ");
 
             int input = Convert.ToInt32(Console.ReadLine());
@@ -56,20 +57,31 @@ namespace Develop05
             int points = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine();
-            Console.Clear();
 
             // use / build constructers....
             if (input == 1)
             {
-                SimpleGoal simpGoal = new SimpleGoal(3, name, description, points);
-                Console.WriteLine($"Bot-----{simpGoal}");
-                _goals.Add(simpGoal); // TODO Broken.... object issues?
+                SimpleGoal simpGoal = new SimpleGoal(name, description, points);
+                _goals.Add(simpGoal);
+            }
+            else if (input == 2)
+            {
+                EteralGoal EGoal = new EteralGoal(name, description, points);
+                _goals.Add(EGoal);
             }
             else
             {
-                EteralGoal EGoal = new EteralGoal(name, description, points);
-                _goals.Add(EGoal); // TODO Broken.... object issues?
+                Console.Write("How many times does this goal need to be acomplished for a bonues?: ");
+                int neededIterations = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("What is the bonues?: ");
+                int bonuesAmt = Convert.ToInt32(Console.ReadLine());
+
+                CheckGoal cGoal = new CheckGoal(bonuesAmt, neededIterations, name, description, points);
+                _goals.Add(cGoal);
             }
+
+            Console.Clear();
         }
 
         public void SaveGoals(FileManager fileMan)
