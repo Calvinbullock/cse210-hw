@@ -119,7 +119,6 @@ namespace Develop05
 
             // Interact with choosen instance of Goal
             int pointsValue = _goals[goalNum].RecordProgress(true);
-            Console.Write($"DEBUG {pointsValue}"); // DEBUG -- not giveing the return of right points amnt
             _totalScore += pointsValue;
 
             Console.WriteLine();
