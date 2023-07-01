@@ -21,41 +21,47 @@ namespace Develop05
             ||      String: the name of the file you want to write to.||
             \*========================================================*/
 
-            // loops throught list to dump it all to one file
-            foreach (Goal goal in goals)
+            try
             {
-                string Name = goal.GetNameOfGoal();
-                string description = goal.GetGoalDescription();
+                // Open the File
+                StreamWriter stream = new StreamWriter(fileName, true, Encoding.ASCII);
 
-                try
+                // loops throught list to dump it all to one file
+                foreach (Goal goal in goals)
                 {
-                    // Open the File
-                    StreamWriter stream = new StreamWriter(fileName, true, Encoding.ASCII);
+                    string name = goal.GetNameOfGoal();
+                    string description = goal.GetGoalDescription();
+                    int pointValue = goal.GetPointValue();
+                    bool isCompleted = goal.GetCompletionValue();
+
+                    // Need to formate how all the goals areTODO dumped to the file
+                    string content = $"{name}|{description}|{pointValue}|{isCompleted}";
+
+                    if (goal is CheckGoal)
+                    {
+                        goal.GetStorageString(); // TODO write a function for each Object...
+
+                    }
 
                     // Writes content to file
-                    stream.WriteLine(description);
-
-                    // TODO -----
-                    // TODO -----
-                    // Need to formate how all the goals are dumped to the file
-                    // TODO -----
-
-                    // Close the file
-                    stream.Close();
+                    stream.WriteLine(content);
                 }
-                catch (Exception except)
-                {
-                    Console.WriteLine("Exception: " + except.Message); // TODO Not sure on error message yet..
-                }
-                finally { } // Not sure if i need something here or not
+
+                // Close the file
+                stream.Close();
             }
+            catch (FileNotFoundException except)
+            {
+                Console.WriteLine("Exception: " + except.Message); // TODO Not sure on error message yet..
+            }
+            finally { } // Not sure if i need something here or not
         }
 
         public List<Goal> ReadFromFile(string fileName)
         {
             /* =======================================================*\
             ||This pulls data from a file and puts it into goals list ||
-            ||      the returns that list.                            ||
+            ||      then returns that list.                           ||
             ||                                                        ||
             || Paramiters:                                            ||
             ||      String: the name of the file you want to write    ||
@@ -64,6 +70,8 @@ namespace Develop05
             string fileContent = "";
             string[] lines = { };
             List<string> subStr = new List<string>();
+            List<Goal> goals = new List<Goal>();
+
 
             // Open the file or throws an error msg
             try
@@ -86,7 +94,7 @@ namespace Develop05
             // Parses FileContent into substrings
             foreach (string index in fileContent.Split(':', StringSplitOptions.RemoveEmptyEntries))
             {
-                // Adds the broken string bits to list nambe dsub
+                // Adds the broken string bits to list nambe substr
                 subStr.Add(index);
             }
 
@@ -116,7 +124,7 @@ namespace Develop05
                 count++;
             }
             // Return the file contents as a string DEBUG
-            return fileContent;
+            return goals;
         }
     }
 }
