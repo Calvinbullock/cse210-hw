@@ -30,10 +30,13 @@ namespace Develop05
 
         public void ListGoals()
         {
+            int goalCount = 1;
             foreach (Goal goal in _goals)
             {
-                goal.Display();
+                Console.WriteLine(goalCount + ". " + goal.Display());
+                goalCount++;
             }
+            Console.WriteLine();
         }
 
         public void SetNewGoal()
