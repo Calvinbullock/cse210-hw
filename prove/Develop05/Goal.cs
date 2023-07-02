@@ -28,8 +28,16 @@ namespace Develop05
             _pointValue = pointValue;
             _nameOfGoal = nameOfGoal;
             _isCompleted = isCompleted;
-            _completedValueString = "[ ]";
-            _isCompleted = false;
+
+            // Sets completion indicater after laoding from file.
+            if (isCompleted)
+            {
+                _completedValueString = "[*]";
+            }
+            else
+            {
+                _completedValueString = "[ ]";
+            }
         }
 
         // ----------------------------- Abstract Functions ---------------------------- \\
