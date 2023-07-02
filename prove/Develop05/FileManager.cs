@@ -168,6 +168,3 @@ namespace Develop05
 
 // Refrance for try catch on reading and writing to and from a file
 // https://learn.microsoft.com/en-us/troubleshoot/developer/visualstudio/csharp/language-compilers/read-write-text-file
-
-// Refrance for indexOF() and SubString() methods
-// https://www.c-sharpcorner.com/UploadFile/mahesh/substring-in-C-Sharp/
