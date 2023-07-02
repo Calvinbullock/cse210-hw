@@ -5,11 +5,14 @@ using System.Collections.Generic;
 
 namespace Develop05
 {
-    ///<summary> 
-    // The responibility of FileManager is to handle the reading and writeing of Journal to files.
-    ///</summary> 
     class FileManager
     {
+        /*========================================================*\
+        || Handels the saveing and loading of goal data to and    ||
+        ||      from save files.                                  ||
+        ||                                                        ||
+        \*========================================================*/
+
         // TODO -- Probably a better way to so this....
         //      I need to store this so I can return it sepret from the array of goals.
         private int _totalScoreFromFile;
@@ -56,8 +59,8 @@ namespace Develop05
         public List<Goal> ReadFromFile(string fileName)
         {
             /* =======================================================*\
-            ||This pulls data from a file and puts it into goals list ||
-            ||      then returns that list.                           ||
+            || This pulls data from a file and puts it into goals     || 
+            ||      list then returns that list.                      ||
             ||                                                        ||
             || Paramiters:                                            ||
             ||      String: the name of the file you want to write    ||
@@ -66,7 +69,7 @@ namespace Develop05
             string[] lines = { };
             List<Goal> goals = new List<Goal>();
 
-            // Open the file or throws an error msg
+            // Open the file or throw an error msg
             try
             {
                 lines = System.IO.File.ReadAllLines(fileName);
@@ -84,7 +87,6 @@ namespace Develop05
             {
                 List<string> dataList = new List<string>();
 
-                // TODO maybe make a local function here....
                 // Adds the broken string bits to list named substr
                 foreach (string dataPart in line.Split('|', StringSplitOptions.RemoveEmptyEntries))
                 {
@@ -112,7 +114,7 @@ namespace Develop05
                     //      so I retturn it from a sepret method
                     _totalScoreFromFile = Convert.ToInt32(dataList[0]);
                 }
-                else if (goalType == 1) // Simple goal
+                else if (goalType == 1) // Parses data for Simple goals
                 {
                     pointValue = Convert.ToInt32(dataList[3]);
                     isCompleted = Convert.ToBoolean(dataList[4]);
@@ -122,7 +124,7 @@ namespace Develop05
                     SimpleGoal simpGoal = new SimpleGoal(nameOfGoal, description, pointValue, isCompleted);
                     goals.Add(simpGoal);
                 }
-                else if (goalType == 2) // Eternal goal
+                else if (goalType == 2) // Parses data for Eternal goals
                 {
                     pointValue = Convert.ToInt32(dataList[3]);
                     isCompleted = Convert.ToBoolean(dataList[4]);
@@ -132,7 +134,7 @@ namespace Develop05
                     EteralGoal EGoal = new EteralGoal(nameOfGoal, description, pointValue, isCompleted);
                     goals.Add(EGoal);
                 }
-                else // Check List goal 
+                else // Parses data for Check List goals 
                 {
                     pointValue = Convert.ToInt32(dataList[3]);
                     isCompleted = Convert.ToBoolean(dataList[4]);
@@ -146,7 +148,6 @@ namespace Develop05
                     CheckGoal cGoal = new CheckGoal(bonuesPointsAmt, completionsNeeded, achivedCompletions, nameOfGoal, description, pointValue, isCompleted);
                     goals.Add(cGoal);
                 }
-
             }
 
             // Return the file contents as a string.
@@ -155,8 +156,10 @@ namespace Develop05
 
         public int GetTotalScore()
         {
-            // Can't return this from the ReadFromFile Method
-            //      so I retturn it from a sepret method
+            /*================================================*\
+            || Can't return this from the ReadFromFile Method ||
+            ||      so I retturn it from a sepret method.     ||
+            \*================================================*/
             return _totalScoreFromFile;
         }
     }

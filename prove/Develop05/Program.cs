@@ -4,13 +4,18 @@ namespace Develop05
     {
         static void Main(string[] args)
         {
+            /*========================================================*\
+            || Runs and create's the main stack.                      ||
+            ||                                                        ||
+            \*========================================================*/
+
             // ----------------- User Interface class instantiation ----------------- \\
             UserInterface UI = new UserInterface();
 
-            // ----------------- File Manager class instantiation ----------------- \\
+            // ------------------ File Manager class instantiation ------------------ \\
             FileManager FileMan = new FileManager();
 
-            // ----------------- Program Run ----------------- \\
+            // ----------------- ----------- Program Run ---------- ----------------- \\
             int exit = 0;
             while (exit == 0)
             {

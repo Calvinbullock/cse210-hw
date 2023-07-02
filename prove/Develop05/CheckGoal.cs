@@ -49,6 +49,6 @@ namespace Develop05
         {
             return $"3|{this.GetNameOfGoal()}|{this.GetGoalDescription()}|{this.GetPointValue()}|{this.GetCompletionValue()}|{_completionsNeeded}|{_achivedCompletions}|{_bonuesPointsAmt}";
         }
-        
+
     }
 }

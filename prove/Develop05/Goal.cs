@@ -2,6 +2,11 @@ namespace Develop05
 {
     abstract class Goal
     {
+        /*========================================================*\
+        || Parent Goal class.                                     ||
+        ||                                                        ||
+        \*========================================================*/
+
         private string _nameOfGoal;
         private string _description;
         private int _pointValue;
@@ -27,12 +32,20 @@ namespace Develop05
             _isCompleted = false;
         }
 
-
+        // ----------------------------- Abstract Functions ---------------------------- \\
         public abstract int RecordProgress(bool completed);
 
+        public abstract string GetStorageString();
+
+        // ----------------------------- Virtual Functions ----------------------------- \\
 
         public virtual void SetCompletion(bool completed)
         {
+            /*========================================================*\
+            || Sets bool completion stat and the complition string.   ||
+            ||                                                        ||
+            \*========================================================*/
+
             _isCompleted = completed;
 
             if (completed)
@@ -51,7 +64,7 @@ namespace Develop05
             return $"{_completedValueString} {_nameOfGoal} ({_description})";
         }
 
-        public abstract string GetStorageString();
+        // ------------------------------- Getters & Setters ------------------------------- \\
 
         public string GetNameOfGoal()
         {

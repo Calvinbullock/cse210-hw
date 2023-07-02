@@ -3,17 +3,28 @@ using System.Collections.Generic;
 
 namespace Develop05
 {
+
     class UserInterface
     {
+        /* =======================================================*\
+        || Handals all console interaction for this goals list    ||
+        ||      program.                                          ||
+        ||                                                        ||
+        \*========================================================*/
+
         private List<Goal> _goals = new List<Goal>();
 
         private int _totalScore = 0;
 
         public int Menu()
         {
+            /*========================================================*\
+            || Create's a user interactable console menu.             ||
+            ||                                                        ||
+            \*========================================================*/
+
             Console.WriteLine($"You have {_totalScore} points.\n");
 
-            // Console display
             Console.WriteLine("Menu Items");
             Console.WriteLine("  1. Create New Goal");
             Console.WriteLine("  2. List Goals");
@@ -32,6 +43,12 @@ namespace Develop05
 
         public void ListGoals()
         {
+            /* =======================================================*\
+            || Enables user interactions to choose and create new     ||
+            ||       goal instances of the three types.               ||
+            ||                                                        ||
+            \*========================================================*/
+
             int goalCount = 1;
             foreach (Goal goal in _goals)
             {
@@ -43,6 +60,12 @@ namespace Develop05
 
         public void SetNewGoal()
         {
+            /* =======================================================*\
+            || Enables user interactions to choose and create new     ||
+            ||       goal instances of the three types.               ||
+            ||                                                        ||
+            \*========================================================*/
+
             Console.WriteLine("Would you like a:");
             Console.WriteLine("1. Simple Goal");
             Console.WriteLine("2. Eternal Goal");
@@ -91,6 +114,14 @@ namespace Develop05
 
         public void SaveGoals(FileManager fileMan)
         {
+            /* =======================================================*\
+            || Writes the list of goals and the users score to a      ||
+            ||      save file.                                        ||
+            ||                                                        ||
+            || Paramiters:                                            ||
+            ||      fileMan: Passes the instace of Filemanager from   ||
+            ||               Program.cs                               ||
+            \*========================================================*/
             Console.Write("What would you like to name you goal file: ");
             string FileName = Console.ReadLine();
 
@@ -99,15 +130,30 @@ namespace Develop05
 
         public void LoadGoals(FileManager fileMan)
         {
+            /* =======================================================*\
+            || The go between for FileManager's load functions and     ||
+            ||      the Program.cs header class                       ||
+            ||                                                        ||
+            || Paramiters:                                            ||
+            ||      fileMan: Passes the instace of Filemanager from   ||
+            ||               Program.cs                               ||
+            \*========================================================*/
+
             Console.Write("What Goal file would you like to read from: ");
             string FileName = Console.ReadLine();
 
+            // Sets goal list and socre from save file
             _goals = fileMan.ReadFromFile(FileName);
             _totalScore = fileMan.GetTotalScore();
         }
 
         public void RecordEvent()
         {
+            /* =======================================================*\
+            || Enables the user to record the completion of a goal.   ||
+            ||                                                        ||
+            \*========================================================*/
+
             ListGoals();
 
             Console.WriteLine();
