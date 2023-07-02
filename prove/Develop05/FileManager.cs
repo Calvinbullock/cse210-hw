@@ -91,9 +91,7 @@ namespace Develop05
                 foreach (string dataPart in line.Split('|', StringSplitOptions.RemoveEmptyEntries))
                 {
                     dataList.Add(dataPart);
-                    Console.WriteLine("93," + dataPart);
                 }
-                Console.WriteLine("96," + dataList.Count);
 
                 // Goals data ready
                 int goalType;
@@ -143,7 +141,7 @@ namespace Develop05
 
                     int bonuesPointsAmt = Convert.ToInt32(dataList[7]);
                     int completionsNeeded = Convert.ToInt32(dataList[5]);
-                    int achivedCompletions = Convert.ToInt32(dataList[6]);
+                    int achivedCompletions = Convert.ToInt32(dataList[6]); // TODO BUG not parsing completions 
 
                     CheckGoal cGoal = new CheckGoal(bonuesPointsAmt, completionsNeeded, achivedCompletions, nameOfGoal, description, pointValue, isCompleted);
                     goals.Add(cGoal);
