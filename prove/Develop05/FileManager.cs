@@ -141,7 +141,7 @@ namespace Develop05
 
                     int bonuesPointsAmt = Convert.ToInt32(dataList[7]);
                     int completionsNeeded = Convert.ToInt32(dataList[5]);
-                    int achivedCompletions = Convert.ToInt32(dataList[6]); // TODO BUG not parsing completions 
+                    int achivedCompletions = Convert.ToInt32(dataList[6]);
 
                     CheckGoal cGoal = new CheckGoal(bonuesPointsAmt, completionsNeeded, achivedCompletions, nameOfGoal, description, pointValue, isCompleted);
                     goals.Add(cGoal);

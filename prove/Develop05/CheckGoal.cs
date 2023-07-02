@@ -20,7 +20,7 @@ namespace Develop05
             _achivedCompletions = achivedCompletions;
             _completionsNeeded = completionsNeeded;
             _bonuesPointsAmt = bonuesPointsAmt;
-            _achivedCompletions = 0;
+            _achivedCompletions = achivedCompletions;
         }
 
         public override int RecordProgress(bool completed)
