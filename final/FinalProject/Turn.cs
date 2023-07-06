@@ -1,12 +1,15 @@
-using System;
 
 namespace final
 {
     class Turn
     {
-        static void Main(string[] args)
+        // <List> of actions;
+
+        public void Add(Action action) { }
+        public void EndTurn()
         {
-            Console.WriteLine("Hello FinalProject World!");
+            // Call action.ApplyActions()
         }
+
     }
 }

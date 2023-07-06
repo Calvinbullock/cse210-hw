@@ -1,12 +1,11 @@
-using System;
 
 namespace final
 {
     class UserInterface
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello FinalProject World!");
-        }
+        public void MainMenu() { }
+        public void BattleScene() { }
+        public void CharicterSelection() { }
+        public void ActionSelection() { }
     }
 }

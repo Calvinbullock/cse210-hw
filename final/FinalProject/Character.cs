@@ -1,12 +1,13 @@
-using System;
 
 namespace final
 {
     class Charicter
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello FinalProject World!");
-        }
+        private int PowerLevel;
+        private int HealthLevel;
+        private int AttackSpeed;
+
+        public void UpdateHealth(int damage) { }
+        public void UpdatePower(int powerUpdate) { }
     }
 }
