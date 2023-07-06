@@ -2,7 +2,7 @@ using System;
 
 namespace final
 {
-    class Program
+    class UserInterface
     {
         static void Main(string[] args)
         {

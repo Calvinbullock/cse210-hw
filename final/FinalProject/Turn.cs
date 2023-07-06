@@ -2,7 +2,7 @@ using System;
 
 namespace final
 {
-    class Program
+    class Turn
     {
         static void Main(string[] args)
         {

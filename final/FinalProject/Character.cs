@@ -2,7 +2,7 @@ using System;
 
 namespace final
 {
-    class Program
+    class Charicter
     {
         static void Main(string[] args)
         {

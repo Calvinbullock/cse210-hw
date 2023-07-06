@@ -2,7 +2,7 @@ using System;
 
 namespace final
 {
-    class Program
+    abstract class Action
     {
         static void Main(string[] args)
         {
