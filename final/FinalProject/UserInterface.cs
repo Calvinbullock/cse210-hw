@@ -10,7 +10,16 @@ namespace final
         {
             // TODO add input validation check
             /*========================================================*\
-            || Runs and create's the main stack.                      ||
+            || Draws the main menu of the game.                       ||
+            ||                                                        ||
+            || Paramiters:                                            ||
+            ||      playerSelection1: shows the slected charicter of  ||
+            ||                              player one.               ||
+            ||      playerSelection2: shows the slected charicter of  ||
+            ||                              player Two.               ||
+            ||                                                        ||
+            || Return:                                                ||
+            ||      the number of the users chosen input.             ||
             ||                                                        ||
             \*========================================================*/
 
@@ -29,10 +38,17 @@ namespace final
             return input;
         }
 
-        public Charicter CharicterSelection(List<Charicter> _charList)
+        public Charicter CharicterSelection(List<Charicter> charList)
         {
             /*========================================================*\
-            || Runs and create's the main stack.                      ||
+            || Draws the charicter selction Menu.                     ||
+            ||                                                        ||
+            || Paramiters:                                            ||
+            ||      charList: a list of the charicters options in the || 
+            ||                      game.                             ||
+            ||                                                        ||
+            || Return:                                                ||
+            ||      The choosen Charicter instance form charList.     ||
             ||                                                        ||
             \*========================================================*/
 
@@ -47,7 +63,7 @@ namespace final
                 Console.WriteLine("Charicter Selection");
 
                 // print out _char list
-                foreach (Charicter charicter in _charList)
+                foreach (Charicter charicter in charList)
                 {
                     Console.WriteLine($"{charicterNumber}. {charicter.GetName()}");
                     charicterNumber++;
@@ -66,7 +82,7 @@ namespace final
                     Console.Write("the number you input was to small");
                     Console.Write("Please enter a valid charicter Number");
                 }
-                else if (input > _charList.Count)
+                else if (input > charList.Count)
                 {
                     Console.Write("the number you input was to large");
                     Console.Write("Please enter a valid charicter Number");
@@ -77,7 +93,7 @@ namespace final
                 }
             }
 
-            return _charList[input - 1];
+            return charList[input - 1];
         }
 
         public void BattleScene()
