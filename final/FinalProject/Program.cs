@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+
 
 namespace final
 {
@@ -6,6 +8,34 @@ namespace final
     {
         static void Main(string[] args)
         {
+            // TODO maybe make another class called Game.cs to store all this gunk.
+            /*========================================================*\
+            || Runs and create's the main stack.                      ||
+            ||                                                        ||
+            \*========================================================*/
+
+            // ----------------- player 1 & 2   class instantiation ----------------- \\
+            Charicter player1;
+            Charicter player2;
+
+            // Menu choosen charicter idicaters   
+            string playerCharName1 = "Select Charicter";
+            string playerCharName2 = "Select Charicter";
+
+            // --------- player diffrent charicter info class instantiation --------- \\
+            // TODO move this to be read from a file in the future
+            Charicter Flamout = new Charicter("Flamout", "fire monkey", 10, 160, 50);
+            Charicter Rockout = new Charicter("Rockout", "Earthen turtle", 10, 200, 30);
+            Charicter Slizzar = new Charicter("Slizzar", "Grass Snacke", 10, 120, 100);
+            Charicter Tailwind = new Charicter("Tailwind", "Air Hawk", 10, 130, 80);
+
+            List<Charicter> _chars = new List<Charicter> {
+                Flamout,
+                Rockout,
+                Slizzar,
+                Tailwind
+            };
+
             // ----------------- User Interface class instantiation ----------------- \\
             UserInterface UI = new UserInterface();
 
