@@ -36,7 +36,7 @@ namespace final
             ||                                                        ||
             \*========================================================*/
 
-            int charicterNumber = 0;
+            int charicterNumber = 1;
             bool exit = false;
             int input = 0;
 
@@ -50,6 +50,7 @@ namespace final
                 foreach (Charicter charicter in _charList)
                 {
                     Console.WriteLine($"{charicterNumber}. {charicter.GetName()}");
+                    charicterNumber++;
                 }
 
                 // Take input for charicteer selection

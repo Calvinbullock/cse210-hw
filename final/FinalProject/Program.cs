@@ -54,11 +54,17 @@ namespace final
                     case 2: // Set player 1
                         player1 = UI.CharicterSelection(_chars);
                         playerCharName1 = player1.GetName();
+
+                        // Send player back to main menu 
+                        userAction = 5;
                         break;
 
                     case 3: // Set player 2
                         player2 = UI.CharicterSelection(_chars);
                         playerCharName2 = player2.GetName();
+
+                        // Send player back to main menu 
+                        userAction = 5;
                         break;
 
                     case 4: // Record Event
