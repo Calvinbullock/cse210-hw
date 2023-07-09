@@ -23,7 +23,10 @@ namespace final
             ||                                                        ||
             \*========================================================*/
 
-            Console.WriteLine("Menu Items");
+            Console.Clear();
+            
+            Console.WriteLine("**Main Menu**");
+            Console.WriteLine();
             Console.WriteLine("1. Start Game");
             Console.WriteLine($"2. Player 1: {playerSelection1}");
             Console.WriteLine($"3. Player 2: {playerSelection2}");
@@ -59,8 +62,8 @@ namespace final
             // Loops until valid charicter number is input
             while (exit == false)
             {
-
-                Console.WriteLine("Charicter Selection");
+                Console.WriteLine("**Charicter Selection**");
+                Console.WriteLine();
 
                 // print out _char list
                 foreach (Charicter charicter in charList)
