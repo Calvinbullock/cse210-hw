@@ -7,6 +7,9 @@ namespace final
         private int _damageToInstigater;
         private int _damageToReciver;
 
+        private Charicter _instagator;
+        private Charicter _reciver;
+
         public Action(string name, int damageToInstigater, int damageToReciver)
         {
             _damageToInstigater = damageToInstigater;
@@ -40,6 +43,11 @@ namespace final
         public string GetName()
         {
             return _name;
+        }
+
+        public void SetInstagaterAndReciver(Charicter instigater, Charicter reciver) {
+            _instagator = instigater;
+            _reciver = reciver;
         }
     }
 }
