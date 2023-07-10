@@ -39,7 +39,7 @@ namespace final
             ||                                                        ||
             \*========================================================*/
 
-            _currentHealthLevel = healthUpdate;
+            _currentHealthLevel += healthUpdate;
         }
 
         public void UpdateAttack(int speedUpdate)
@@ -54,7 +54,7 @@ namespace final
             ||                                                        ||
             \*========================================================*/
 
-            _currentAttackSpeed = speedUpdate;
+            _currentAttackSpeed += speedUpdate;
         }
 
         public void UpdatePower(int powerUpdate)
@@ -69,7 +69,7 @@ namespace final
             ||                                                        ||
             \*========================================================*/
 
-            _currentPowerLevel = powerUpdate;
+            _currentPowerLevel += powerUpdate;
         }
 
         public string GetName()

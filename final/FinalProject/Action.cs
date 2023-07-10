@@ -11,7 +11,10 @@ namespace final
             _reciver = reciver;
         }
 
-        public abstract void ApplyActions();
-        // Maybe overload for diffrent actions - not nailed down yet...
+        public abstract string ApplyActions();
+        // TODOs Maybe overload for diffrent actions - not nailed down 
+        //      yet...
+        // TODOs Figure out some way to printthe details of the move 
+        //      during the battle
     }
 }
