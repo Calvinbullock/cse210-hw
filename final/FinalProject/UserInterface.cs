@@ -164,6 +164,7 @@ namespace final
 
         public void SendErrorMSG(string message)
         {
+            // Main Menu error msg
             _playerMsg = message;
         }
 

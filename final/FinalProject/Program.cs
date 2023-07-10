@@ -15,6 +15,8 @@ namespace final
             \*========================================================*/
 
             // ----------------- player 1 & 2   class instantiation ----------------- \\
+            Charicter player1 = null;
+            Charicter player2 = null;
 
             // ----------------- player 1 & 2   class instantiation ----------------- \\
             Turn turn = new Turn();
@@ -35,14 +37,6 @@ namespace final
                 rockout,
                 slizzar,
                 tailwind
-            };
-            
-            // --------- player diffrent charicter info class instantiation --------- \\
-            // TODO move this to be read from a file in the future
-            Action fireBall = new Action();
-
-            List<Action> avalableActions = new List<Action> {
-
             };
 
             // ----------------- User Interface class instantiation ----------------- \\
@@ -78,6 +72,7 @@ namespace final
                         else
                         {
                             UI.SendErrorMSG("Select charicters.");
+
                             // kick user back to Main Menu
                             userAction = 5;
                         }
@@ -99,12 +94,12 @@ namespace final
                         userAction = 5;
                         break;
 
-                    case 4: // Record Event
+                    case 4: // Quit game
                         exit = true;
                         UI.GoodByeMsg();
                         break;
 
-                    case 5: // Return to mainMenu
+                    case 5: // Return to MainMenu
                         userAction = UI.MainMenu(playerCharName1, playerCharName2);
                         break;
                 }
