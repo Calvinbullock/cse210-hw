@@ -29,6 +29,18 @@ namespace final
             _currentPowerLevel = _basePowerLevel;
             _currentHealthLevel = _baseHealthLevel;
             _currentAttackSpeed = _baseAttackSpeed;
+
+
+            // --------- player diffrent charicter info class instantiation --------- \\
+            // TODO move this to be read from a file in the future
+            FireBall fireBall = new FireBall("FireBall", 0, -20);
+            Defend defend = new Defend("Defend", 20, 0);
+
+            _avalableActions = new List<Action>
+            {
+                fireBall,
+                defend
+            };            
         }
 
         public void UpdateHealth(int healthUpdate)
