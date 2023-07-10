@@ -3,16 +3,16 @@ namespace final
 {
     abstract class FireBall : Action
     {
-        public FireBall(Charicter instigater, Charicter reciver)
-                : base(instigater, reciver)
+        public FireBall(int damageToInstigater, int damageToReciver)
+                : base(damageToInstigater, damageToReciver)
         {
 
         }
 
-        public override string ApplyActions()
+        public override string ApplyActions(Charicter instigater, Charicter reciver)
         {
-            this._reciver.UpdateHealth(-20);
-            return $"{this._instigater.GetName()} used FireBall 20 Dmg delt";
+            instigater.UpdateHealth(this.GetDamageToReciver());
+            return $"{instigater.GetName()} used FireBall 20 Dmg delt";
         }
     }
 }

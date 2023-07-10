@@ -3,16 +3,16 @@ namespace final
 {
     abstract class Defend : Action
     {
-        public Defend(Charicter instigater, Charicter reciver)
-                : base(instigater, reciver)
+        public Defend(int damageToInstigater, int damageToReciver)
+                : base(damageToInstigater, damageToReciver)
         {
 
         }
 
-        public override string ApplyActions()
+        public override string ApplyActions(Charicter instigater, Charicter reciver)
         {
-            this._instigater.UpdateHealth(20);
-            return $"{this._instigater.GetName()} used Defend, 20 Dmg negated";
+            instigater.UpdateHealth(this.GetDamageToReciver());
+            return $"{instigater.GetName()} used Defend, 20 Dmg negated";
         }
     }
 }
