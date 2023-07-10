@@ -5,6 +5,7 @@ namespace final
 {
     class UserInterface
     {
+        private string _playerMsg = "";
 
         public int MainMenu(string playerSelection1, string playerSelection2)
         {
@@ -24,8 +25,9 @@ namespace final
             \*========================================================*/
 
             Console.Clear();
-            
+
             Console.WriteLine("**Main Menu**");
+            Console.WriteLine(_playerMsg);
             Console.WriteLine();
             Console.WriteLine("1. Start Game");
             Console.WriteLine($"2. Player 1: {playerSelection1}");
@@ -37,6 +39,9 @@ namespace final
             int input = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
             Console.Clear();
+
+            // Reset error msg after leaving the Main Menu
+            _playerMsg = "";
 
             return input;
         }
@@ -105,6 +110,7 @@ namespace final
             || Runs and create's the main stack.                      ||
             ||                                                        ||
             \*========================================================*/
+
         }
 
         public void ActionSelection()
@@ -113,6 +119,11 @@ namespace final
             || Runs and create's the main stack.                      ||
             ||                                                        ||
             \*========================================================*/
+        }
+
+        public void ErrorMSG(string message)
+        {
+            _playerMsg = message;
         }
 
         public void GoodByeMsg()
