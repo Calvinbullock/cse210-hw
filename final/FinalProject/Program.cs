@@ -55,7 +55,7 @@ namespace final
                         }
                         else
                         {
-                            UI.ErrorMSG("Select charicters.");
+                            UI.SendErrorMSG("Select charicters.");
                             // kick user back to Main Menu
                             userAction = 5;
                         }

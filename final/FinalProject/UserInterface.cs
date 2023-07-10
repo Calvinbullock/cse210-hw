@@ -121,7 +121,7 @@ namespace final
             \*========================================================*/
         }
 
-        public void ErrorMSG(string message)
+        public void SendErrorMSG(string message)
         {
             _playerMsg = message;
         }
