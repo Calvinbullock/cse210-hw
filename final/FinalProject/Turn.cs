@@ -13,7 +13,14 @@ namespace final
 
         public void EndTurn()
         {
-            // Call action.ApplyActions()
+            /*========================================================*\
+            || Applys all action made in the turn.                    ||
+            ||                                                        ||
+            \*========================================================*/
+            foreach (Action action in _choosenActions)
+            {
+                action.ApplyActions();
+            }
         }
 
     }
