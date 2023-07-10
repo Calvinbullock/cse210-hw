@@ -1,10 +1,10 @@
 
 namespace final
 {
-    abstract class Defend : Action
+    class Defend : Action
     {
-        public Defend(int damageToInstigater, int damageToReciver)
-                : base(damageToInstigater, damageToReciver)
+        public Defend(string name, int damageToInstigater, int damageToReciver)
+                : base(name, damageToInstigater, damageToReciver)
         {
 
         }
