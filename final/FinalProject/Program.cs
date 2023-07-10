@@ -48,7 +48,17 @@ namespace final
                 switch (userAction)
                 {
                     case 1: // Start Game
-                        UI.BattleScene();
+                        // Make sure both charicters 
+                        if (!(playerCharName1.Equals("Select Charicter")) && !(playerCharName2.Equals("Select Charicter")))
+                        {
+                            UI.BattleScene();
+                        }
+                        else
+                        {
+                            UI.ErrorMSG("Select charicters.");
+                            // kick user back to Main Menu
+                            userAction = 5;
+                        }
                         break;
 
                     case 2: // Set player 1
