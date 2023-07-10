@@ -49,6 +49,8 @@ namespace final
             UserInterface UI = new UserInterface();
 
             bool exit = false;
+            Action player1Action = null;
+            Action player2Action = null;
             int userAction = UI.MainMenu(playerCharName1, playerCharName2);
 
             while (exit == false)
