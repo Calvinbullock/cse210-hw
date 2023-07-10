@@ -94,6 +94,11 @@ namespace final
             _avalableActions.Add(action);
         }
 
+        public List<Action> GetAvalableActions()
+        {
+            return _avalableActions;
+        }
+
         public string GetName()
         {
             return _charicterName;
