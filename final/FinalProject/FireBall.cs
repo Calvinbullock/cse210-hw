@@ -12,7 +12,7 @@ namespace final
         public override string ApplyActions()
         {
             this._reciver.UpdateHealth(-20);
-            return "Attacker used FireBall 20 Dmg delt";
+            return $"{this._instigater.GetName()} used FireBall 20 Dmg delt";
         }
     }
 }
