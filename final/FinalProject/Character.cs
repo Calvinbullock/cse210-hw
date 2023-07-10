@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 
 namespace final
 {
@@ -12,15 +13,19 @@ namespace final
         private int _currentHealthLevel;
         private int _currentAttackSpeed;
 
+        // TODO read to this from a file on instanciation
+        private List<Action> _avalableActions = new List<Action>();
+
         public Charicter(string charicterName, string charicterDescription, int powerLevel, int healthLevel, int attackSpeed)
         {
+            // Set base stats
             _charicterName = charicterName;
             _charicterDescription = charicterDescription;
             _basePowerLevel = powerLevel;
             _baseHealthLevel = healthLevel;
             _baseAttackSpeed = attackSpeed;
 
-
+            // Set all current stats to base 
             _currentPowerLevel = _basePowerLevel;
             _currentHealthLevel = _baseHealthLevel;
             _currentAttackSpeed = _baseAttackSpeed;
@@ -70,6 +75,11 @@ namespace final
             \*========================================================*/
 
             _currentPowerLevel += powerUpdate;
+        }
+
+        public void AddActionToAvalableActions(Action action)
+        {
+            _avalableActions.Add(action);
         }
 
         public string GetName()
