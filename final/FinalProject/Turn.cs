@@ -6,20 +6,21 @@ namespace final
     {
         private List<Action> _choosenActions = new List<Action>();
 
-        public void Add(Action action)
+        public void AddAction(Action action)
         {
             _choosenActions.Add(action);
         }
 
-        public void EndTurn()
+        public void EndTurn(Charicter instigater, Charicter reciver)
         {
             /*========================================================*\
             || Applys all action made in the turn.                    ||
             ||                                                        ||
             \*========================================================*/
+
             foreach (Action action in _choosenActions)
             {
-                action.ApplyActions();
+                action.ApplyActions(instigater, reciver);
             }
         }
 
