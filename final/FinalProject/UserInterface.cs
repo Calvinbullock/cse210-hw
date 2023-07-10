@@ -107,7 +107,15 @@ namespace final
         public Action ActionSelection(string player, Charicter instigater)
         {
             /*========================================================*\
+            || Prints menu for user to choose their action.           ||
             ||                                                        ||
+            || Paramiters:                                            ||
+            ||        player: The name of the player takeing action.  ||
+            ||        instigater: The charicter that is takeing       ||
+            ||                      action.                           ||
+            ||                                                        ||
+            || Return:                                                ||
+            ||        actionsList[input - 1]: the choosen action.     ||
             ||                                                        ||
             \*========================================================*/
 
