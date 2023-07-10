@@ -104,16 +104,57 @@ namespace final
             return charList[input - 1];
         }
 
-        public void BattleScene()
+        public Action ActionSelection(string player, Charicter instigater)
         {
             /*========================================================*\
-            || Runs and create's the main stack.                      ||
+            ||                                                        ||
             ||                                                        ||
             \*========================================================*/
 
+            List<Action> actionsList = instigater.GetAvalableActions();
+            bool exit = false;
+            int input = 0;
+            int index = 0;
+
+            while (exit == false)
+            {
+                Console.WriteLine($"**{player}, Select Action**");
+                Console.WriteLine();
+
+                foreach (Action action in actionsList)
+                {
+                    Console.WriteLine($"{index + 1}. {action.GetName()}");
+                    index++;
+                }
+
+                // Take input for charicteer selection
+                Console.Write("Select a choice from the menu: ");
+
+                input = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine();
+                Console.Clear();
+
+                // Check if valid number was input
+                if (input < 1)
+                {
+                    Console.Write("the number you input was to small");
+                    Console.Write("Please enter a valid charicter Number");
+                }
+                else if (input > actionsList.Count)
+                {
+                    Console.Write("the number you input was to large");
+                    Console.Write("Please enter a valid charicter Number");
+                }
+                else
+                {
+                    exit = true;
+                }
+            }
+
+            return actionsList[input - 1];
         }
 
-        public void ActionSelection()
+        public void BattleScene()
         {
             /*========================================================*\
             || Runs and create's the main stack.                      ||
