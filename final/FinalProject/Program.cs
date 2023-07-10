@@ -15,8 +15,9 @@ namespace final
             \*========================================================*/
 
             // ----------------- player 1 & 2   class instantiation ----------------- \\
-            Charicter player1;
-            Charicter player2;
+
+            // ----------------- player 1 & 2   class instantiation ----------------- \\
+            Turn turn = new Turn();
 
             // Menu choosen charicter idicaters   
             string playerCharName1 = "Select Charicter";
@@ -57,9 +58,20 @@ namespace final
                 {
                     case 1: // Start Game
                         // Make sure both charicters 
-                        if (!(playerCharName1.Equals("Select Charicter")) && !(playerCharName2.Equals("Select Charicter")))
+                        if (!(playerCharName1.Equals("Select Charicter"))
+                                && !(playerCharName2.Equals("Select Charicter")))
                         {
-                            UI.BattleScene();
+                            player1Action = UI.ActionSelection("Player 1", player1);
+                            player1Action.SetInstagaterAndReciver(player1, player2);
+                            turn.AddAction(player1Action);
+
+                            player2Action = UI.ActionSelection("Player 2", player2);
+                            player2Action.SetInstagaterAndReciver(player2, player1);
+                            turn.AddAction(player2Action);
+
+                            // TODO figure out how to allow user to exit with out 
+                            //          kicking user back to Main Menu.
+
                         }
                         else
                         {
