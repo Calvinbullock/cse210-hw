@@ -17,7 +17,7 @@ namespace final
             _name = name;
         }
 
-        public abstract string ApplyActions(Charicter instigater, Charicter reciver);
+        public abstract string ApplyActions();
         /*========================================================*\
         || This is the abstract for all actions.                  ||
         ||                                                        ||
@@ -45,7 +45,18 @@ namespace final
             return _name;
         }
 
-        public void SetInstagaterAndReciver(Charicter instigater, Charicter reciver) {
+        public Charicter GetInstigater()
+        {
+            return _instagator;
+        }
+
+        public Charicter GetReciver()
+        {
+            return _reciver;
+        }
+
+        public void SetInstagaterAndReciver(Charicter instigater, Charicter reciver)
+        {
             _instagator = instigater;
             _reciver = reciver;
         }
