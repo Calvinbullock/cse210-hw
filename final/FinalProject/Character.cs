@@ -40,7 +40,7 @@ namespace final
             {
                 fireBall,
                 defend
-            };            
+            };
         }
 
         public void UpdateHealth(int healthUpdate)
@@ -107,6 +107,16 @@ namespace final
         public string GetCharicterSummery()
         {
             return _charicterDescription;
+        }
+
+        public int GetCurrentHealth()
+        {
+            return _currentHealthLevel;
+        }
+
+        public int GetBaseHealth()
+        {
+            return _baseHealthLevel;
         }
     }
 }
