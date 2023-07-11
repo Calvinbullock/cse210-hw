@@ -56,11 +56,11 @@ namespace final
                                 && !(playerCharName2.Equals("Select Charicter")))
                         {
                             player1Action = UI.ActionSelection("Player 1", player1);
-                            player1Action.SetInstagaterAndReciver(player1, player2);
+                            player1Action.SetInstigaterAndReciver(player1, player2);
                             turn.AddAction(player1Action);
 
                             player2Action = UI.ActionSelection("Player 2", player2);
-                            player2Action.SetInstagaterAndReciver(player2, player1);
+                            player2Action.SetInstigaterAndReciver(player2, player1);
                             turn.AddAction(player2Action);
 
                             // TODO figure out how to allow user to exit with out 
