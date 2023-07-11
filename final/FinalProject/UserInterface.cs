@@ -6,6 +6,11 @@ namespace final
 {
     class UserInterface
     {
+        /*========================================================*\
+        || This Class is a console based user interface.          ||
+        ||                                                        ||
+        \*========================================================*/
+
         private string _playerMsg = "";
 
         public int MainMenu(string playerSelection1, string playerSelection2)

@@ -4,6 +4,15 @@ namespace final
 {
     class Charicter
     {
+        /*========================================================*\
+        || This class is the base for charicters and there stats. ||
+        ||        This class also stores the avalable moves for   ||
+        ||        each charicter.                                 ||
+        ||                                                        ||
+        \*========================================================*/
+
+        // TODO move Action instatiations to be read from a file in the future
+
         private string _charicterName;
         private string _charicterDescription;
         private int _basePowerLevel;
@@ -30,9 +39,7 @@ namespace final
             _currentHealthLevel = _baseHealthLevel;
             _currentAttackSpeed = _baseAttackSpeed;
 
-
-            // --------- player diffrent charicter info class instantiation --------- \\
-            // TODO move this to be read from a file in the future
+            // --------- Action instatiations --------- \\
             FireBall fireBall = new FireBall("FireBall", 0, -20);
             RockToss rockToss = new RockToss("RockToss", 0, -20);
             AirSlice airSlice = new AirSlice("AirSlice", 10, -10);
@@ -126,7 +133,8 @@ namespace final
             return _baseHealthLevel;
         }
 
-        public int GetPowerLevel() {
+        public int GetPowerLevel()
+        {
             return _currentPowerLevel;
         }
 
