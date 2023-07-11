@@ -34,12 +34,19 @@ namespace final
             // --------- player diffrent charicter info class instantiation --------- \\
             // TODO move this to be read from a file in the future
             FireBall fireBall = new FireBall("FireBall", 0, -20);
+            RockToss rockToss = new RockToss("RockToss", 0, -20);
+            AirSlice airSlice = new AirSlice("AirSlice", 10, -10);
+            SapSeed sapSeed = new SapSeed("SapSeed", 10, -20);
+
             Defend defend = new Defend("Defend", 20, 0);
 
             _avalableActions = new List<Action>
             {
                 fireBall,
-                defend
+                defend,
+                airSlice,
+                rockToss,
+                sapSeed
             };
         }
 
@@ -118,5 +125,10 @@ namespace final
         {
             return _baseHealthLevel;
         }
+
+        public int GetPowerLevel() {
+            return _currentPowerLevel;
+        }
+
     }
 }
