@@ -3,6 +3,13 @@ namespace final
 {
     abstract class Action
     {
+        /*========================================================*\
+        || This Class allows varies diffrent actions to be        ||
+        ||      preformed on both the action instigater and the   ||
+        ||      reciver of the action.                            ||
+        ||                                                        ||
+        \*========================================================*/
+
         private string _name;
         private int _damageToInstigater;
         private int _damageToReciver;
@@ -19,16 +26,11 @@ namespace final
 
         public abstract string ApplyActions();
         /*========================================================*\
-        || This is the abstract for all actions.                  ||
+        || This is the abstract for all actions. Updates health   ||
+        ||      and other data that pertains to the given action. ||
+        ||      by the diffrent actions.                          ||
         ||                                                        ||
-        || Paramiters:                                            ||
-        ||      instigater: 
-        ||      reciver: 
         \*========================================================*/
-        // TODOs Maybe overload for diffrent actions - not nailed down 
-        //      yet...
-        // TODOs Figure out some way to print the details of the move 
-        //      during the battle
 
         public int GetDamageToInstigater()
         {
