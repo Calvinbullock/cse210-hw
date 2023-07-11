@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using System.Collections.Generic;
 
 namespace final
@@ -34,7 +35,7 @@ namespace final
             Console.WriteLine($"3. Player 2: {playerSelection2}");
             Console.WriteLine("4. Exit");
 
-            Console.Write("Select a choice from the menu: ");
+            Console.Write("Select a choice from the menu [1 - 4]: ");
 
             int input = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
@@ -78,7 +79,7 @@ namespace final
                 }
 
                 // Take input for charicteer selection
-                Console.Write("Select a choice from the menu: ");
+                Console.Write($"Select a choice from the menu [1 - {charList.Count}]: ");
 
                 input = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
@@ -136,7 +137,7 @@ namespace final
                 }
 
                 // Take input for charicteer selection
-                Console.Write("Select a choice from the menu: ");
+                Console.Write($"Select a choice from the menu [1 - {actionsList.Count}]: ");
 
                 input = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
@@ -146,19 +147,19 @@ namespace final
                 if (input < 1)
                 {
                     Console.Write("the number you input was to small");
-                    Console.Write("Please enter a valid charicter Number");
+                    Console.Write("Please enter a valid action Number");
                 }
                 else if (input > actionsList.Count)
                 {
                     Console.Write("the number you input was to large");
-                    Console.Write("Please enter a valid charicter Number");
+                    Console.Write("Please enter a valid action Number");
                 }
                 else
                 {
                     exit = true;
                 }
             }
-
+            LoadingAnimation(1);
             return actionsList[input - 1];
         }
 

@@ -25,10 +25,10 @@ namespace final
 
             // --------- player diffrent charicter info class instantiation --------- \\
             // TODO move this to be read from a file in the future
-            Charicter flamout = new Charicter("Flamout", "fire monkey", 10, 160, 50);
-            Charicter rockout = new Charicter("Rockout", "Earthen turtle", 10, 200, 30);
-            Charicter slizzar = new Charicter("Slizzar", "Grass Snacke", 10, 120, 100);
-            Charicter tailwind = new Charicter("Tailwind", "Air Hawk", 10, 130, 80);
+            Charicter flamout = new Charicter("Flameout", "fire monkey", 10, 60, 50);
+            Charicter rockout = new Charicter("Rockout", "Earthen turtle", 10, 100, 30);
+            Charicter slizzar = new Charicter("Slizzar", "Grass Snacke", 10, 80, 100);
+            Charicter tailwind = new Charicter("Tailwind", "Air Hawk", 10, 40, 80);
 
             List<Charicter> chars = new List<Charicter> {
                 flamout,

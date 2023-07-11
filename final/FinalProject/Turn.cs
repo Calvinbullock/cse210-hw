@@ -11,17 +11,20 @@ namespace final
             _choosenActions.Add(action);
         }
 
-        public void EndTurn(Charicter instigater, Charicter reciver)
+        public List<string> EndTurn()
         {
             /*========================================================*\
             || Applys all action made in the turn.                    ||
             ||                                                        ||
             \*========================================================*/
 
+            List<string> actionSummerys = new List<string>();
+
             foreach (Action action in _choosenActions)
             {
-                action.ApplyActions(instigater, reciver);
+                actionSummerys.Add(action.ApplyActions());
             }
+            return actionSummerys;
         }
 
     }
