@@ -162,12 +162,31 @@ namespace final
             return actionsList[input - 1];
         }
 
-        public void BattleScene()
+        public void BattleScene(Turn turn, Charicter player1, Charicter player2)
         {
             /*========================================================*\
             || Runs and create's the main stack.                      ||
             ||                                                        ||
             \*========================================================*/
+
+            List<string> actionSummerys = turn.EndTurn();
+
+            foreach (string actionSummery in actionSummerys)
+            {
+                Console.WriteLine($"{actionSummery}");
+            }
+            HealthBar(player1, player2);
+
+            Console.WriteLine("Hit enter: ");
+            Console.ReadLine();
+            LoadingAnimation(1);
+        }
+
+        private void HealthBar(Charicter player1, Charicter player2)
+        {
+            Console.WriteLine("");
+            Console.WriteLine($"Player 1                    Player 2");
+            Console.WriteLine($"{player1.GetBaseHealth()}/{player1.GetCurrentHealth()}                        {player2.GetBaseHealth()}/{player2.GetCurrentHealth()}");
         }
 
         public void SendErrorMSG(string message)
