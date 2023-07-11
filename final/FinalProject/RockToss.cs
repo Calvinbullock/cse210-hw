@@ -1,9 +1,9 @@
 
 namespace final
 {
-    class FireBall : Action
+    class RockToss : Action
     {
-        public FireBall(string name, int damageToInstigater, int damageToReciver)
+        public RockToss(string name, int damageToInstigater, int damageToReciver)
                 : base(name, damageToInstigater, damageToReciver) { }
 
         public override string ApplyActions()
@@ -14,7 +14,7 @@ namespace final
             int damageToReciver = this.GetDamageToReciver();
 
             reciver.UpdateHealth(damageToReciver);
-            return $"{instigater.GetName()} used FireBall {damageToReciver} Dmg delt";
+            return $"{instigater.GetName()} used RockToss {damageToReciver} Dmg delt";
         }
     }
 }

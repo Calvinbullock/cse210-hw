@@ -30,7 +30,7 @@ namespace final
         // TODOs Figure out some way to print the details of the move 
         //      during the battle
 
-        public int GetDamageToInstgater()
+        public int GetDamageToInstigater()
         {
             return _damageToInstigater;
         }
@@ -55,7 +55,7 @@ namespace final
             return _reciver;
         }
 
-        public void SetInstagaterAndReciver(Charicter instigater, Charicter reciver)
+        public void SetInstigaterAndReciver(Charicter instigater, Charicter reciver)
         {
             _instagator = instigater;
             _reciver = reciver;
