@@ -12,6 +12,8 @@ namespace final
         \*========================================================*/
 
         // TODO move Action instatiations to be read from a file in the future
+        // TODO add fileName to constructer paramiters. That will let move sets 
+        //      be diffrent for diffrent charicters. 
 
         private string _charicterName;
         private string _charicterDescription;
