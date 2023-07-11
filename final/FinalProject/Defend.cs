@@ -11,7 +11,7 @@ namespace final
 
         public override string ApplyActions()
         {
-            this.GetInstigater().UpdateHealth(this.GetDamageToReciver());
+            this.GetInstigater().UpdateHealth(this.GetDamageToInstgater());
             return $"{GetInstigater().GetName()} used Defend, 20 Dmg negated";
         }
     }
