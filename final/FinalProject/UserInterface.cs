@@ -180,5 +180,27 @@ namespace final
         {
             Console.WriteLine("Good Bye");
         }
+
+        public void LoadingAnimation(int runtime)
+        {
+            // Stores the animation.
+            //      the animation has a base time of 4 seconds to complete
+            string[] animation = { "-", "\\", "|", "/" };
+            int count = 0;
+            Console.WriteLine("Just a moment...");
+
+            // loops trought the animation takes about 5 seconds
+            while (count != runtime)
+            {
+                foreach (string value in animation)
+                {
+                    Thread.Sleep(800);
+                    Console.Write(value);
+                    Console.Write("\b");
+                }
+                count++;
+            }
+            Console.Clear();
+        }
     }
 }

@@ -65,7 +65,7 @@ namespace final
 
                             // TODO figure out how to allow user to exit with out 
                             //          kicking user back to Main Menu.
-
+                            UI.BattleScene(turn, player1, player2);
                         }
                         else
                         {
