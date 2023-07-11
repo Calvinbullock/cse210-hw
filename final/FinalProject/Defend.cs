@@ -9,10 +9,10 @@ namespace final
 
         }
 
-        public override string ApplyActions(Charicter instigater, Charicter reciver)
+        public override string ApplyActions()
         {
-            instigater.UpdateHealth(this.GetDamageToReciver());
-            return $"{instigater.GetName()} used Defend, 20 Dmg negated";
+            this.GetInstigater().UpdateHealth(this.GetDamageToReciver());
+            return $"{GetInstigater().GetName()} used Defend, 20 Dmg negated";
         }
     }
 }

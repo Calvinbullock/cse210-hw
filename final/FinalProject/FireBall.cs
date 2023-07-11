@@ -18,7 +18,7 @@ namespace final
 
         }
 
-        public override string ApplyActions(Charicter instigater, Charicter reciver)
+        public override string ApplyActions()
         {
             /*========================================================*\
             || This is the abstract for all actions.                  ||
@@ -27,8 +27,9 @@ namespace final
             ||      instigater: 
             ||      reciver: 
             \*========================================================*/
-            instigater.UpdateHealth(this.GetDamageToReciver());
-            return $"{instigater.GetName()} used FireBall 20 Dmg delt";
+
+            this.GetReciver().UpdateHealth(this.GetDamageToReciver());
+            return $"{this.GetInstigater().GetName()} used FireBall 20 Dmg delt";
         }
     }
 }
