@@ -171,18 +171,21 @@ namespace final
         public void BattleScene(Turn turn, Charicter player1, Charicter player2)
         {
             /*========================================================*\
-            || Runs and create's the main stack.                      ||
+            || Shows the players stats and the action summeries.      ||
             ||                                                        ||
             \*========================================================*/
 
             List<string> actionSummerys = turn.EndTurn();
 
+            // Print out Actions summeries
             foreach (string actionSummery in actionSummerys)
             {
                 Console.WriteLine($"{actionSummery}");
             }
+
             HealthBar(player1, player2);
 
+            // Wait for players to be ready before moveing on.
             Console.WriteLine("Hit enter: ");
             Console.ReadLine();
             LoadingAnimation(1);
@@ -190,6 +193,11 @@ namespace final
 
         private void HealthBar(Charicter player1, Charicter player2)
         {
+            /*========================================================*\
+            || Is called by Battle Scean, prints the players stat.    ||
+            ||                                                        ||
+            \*========================================================*/
+
             Console.WriteLine("");
             Console.WriteLine($"Player 1                    Player 2");
             Console.WriteLine($"{player1.GetBaseHealth()}/{player1.GetCurrentHealth()}                        {player2.GetBaseHealth()}/{player2.GetCurrentHealth()}");

@@ -7,6 +7,8 @@ namespace final
         static void Main(string[] args)
         {
             // TODO maybe make another class called Game.cs to store all this gunk.
+            // TODO move charicter instantiation to be read from a file 
+            //          in the future.
             /*========================================================*\
             || Runs and create's the main stack.                      ||
             ||                                                        ||
@@ -24,8 +26,8 @@ namespace final
             string playerCharName2 = "Select Charicter";
 
             // --------- player diffrent charicter info class instantiation --------- \\
-            // TODO move this to be read from a file in the future
-            Charicter flamout = new Charicter("Flameout", "fire monkey", 10, 60, 50);
+            Charicter flamout = new Charicter("GameTest", "fire monkey", 0, 0, 50);
+            // Charicter flamout = new Charicter("Flameout", "fire monkey", 10, 60, 50);
             Charicter rockout = new Charicter("Rockout", "Earthen turtle", 10, 100, 30);
             Charicter slizzar = new Charicter("Slizzar", "Grass Snacke", 10, 80, 100);
             Charicter tailwind = new Charicter("Tailwind", "Air Hawk", 10, 40, 80);
@@ -55,10 +57,12 @@ namespace final
                         if (!(playerCharName1.Equals("Select Charicter"))
                                 && !(playerCharName2.Equals("Select Charicter")))
                         {
+                            // Action Selections for player 1
                             player1Action = UI.ActionSelection("Player 1", player1);
                             player1Action.SetInstigaterAndReciver(player1, player2);
                             turn.AddAction(player1Action);
 
+                            // Action Selections for player 2
                             player2Action = UI.ActionSelection("Player 2", player2);
                             player2Action.SetInstigaterAndReciver(player2, player1);
                             turn.AddAction(player2Action);
@@ -121,6 +125,10 @@ namespace final
 
                     case 5: // Return to MainMenu
                         userAction = UI.MainMenu(playerCharName1, playerCharName2);
+                        break;
+
+                    case 6:
+                        // TODO resset the game
                         break;
                 }
             }
