@@ -10,6 +10,9 @@ namespace final
         ||                                                        ||
         \*========================================================*/
 
+        // TODO Need to make a way for diffrent actions to interact 
+        //      with other actions 
+
         private List<Action> _choosenActions = new List<Action>();
 
         public void AddAction(Action action)
