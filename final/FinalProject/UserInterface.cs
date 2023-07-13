@@ -199,8 +199,10 @@ namespace final
             \*========================================================*/
 
             Console.WriteLine("");
-            Console.WriteLine($"Player 1                    Player 2");
-            Console.WriteLine($"{player1.GetBaseHealth()}/{player1.GetCurrentHealth()}                        {player2.GetBaseHealth()}/{player2.GetCurrentHealth()}");
+            Console.WriteLine($"    Player 1                    Player 2");
+            Console.WriteLine($"HP: {player1.GetBaseHealth()}/{player1.GetCurrentHealth()}                        {player2.GetBaseHealth()}/{player2.GetCurrentHealth()}");
+            Console.WriteLine($"Pwr: {player1.GetBasePowerLevel()}/{player1.GetCurrentPowerLevel()}                        {player2.GetBasePowerLevel()}/{player2.GetCurrentPowerLevel()}");
+
         }
 
         public void SendErrorMSG(string message)
