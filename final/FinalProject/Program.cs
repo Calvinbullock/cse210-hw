@@ -66,6 +66,28 @@ namespace final
                             // TODO figure out how to allow user to exit with out 
                             //          kicking user back to Main Menu.
                             UI.BattleScene(turn, player1, player2);
+
+                            // Player health
+                            int player1Health = player1.GetCurrentHealth();
+                            int player2Health = player2.GetCurrentHealth();
+
+                            int startNewGame = 0;
+
+                            // check if player is dead
+                            if (player1Health < 1 && player2Health < 1)
+                            {
+                                startNewGame = UI.GameOver("", 2);
+                            }
+                            else if (player1Health < 1)
+                            {
+                                // Player 2 wins
+                                startNewGame = UI.GameOver("Player 2", 1);
+                            }
+                            else if (player2Health < 1)
+                            {
+                                // Player 1 wins
+                                startNewGame = UI.GameOver("Player 1", 0);
+                            }
                         }
                         else
                         {

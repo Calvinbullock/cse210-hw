@@ -206,6 +206,58 @@ namespace final
             Console.WriteLine("Good Bye");
         }
 
+        public int GameOver(string winningPlayer, int winner)
+        {
+            /*========================================================*\
+            || Print who one then ask if they want to restart.        ||
+            ||                                                        ||
+            || Paramiters:                                            ||
+            ||        player1: player1's charicter.                   ||
+            ||        Player2: player2's charicter.                   ||
+            ||        winner: 0 = player1 wins, 1 = player2 wins,     ||
+            ||                      2 = tie.                          ||                   ||
+            || Return:                                                ||
+            ||        0 = New game. - Will resset all charicters and  ||
+            ||                             actions.                   ||
+            ||        4 = End game. - This will kick it to the end    ||
+            ||                             game switch in program.    ||
+            ||                                                        ||
+            \*========================================================*/
+
+            // Todo input validation needed. --- maybe move the 
+            //          validation to external function. 
+
+
+            Console.WriteLine($" ------ Game Over ------ ");
+
+            if (winner == 0 || winner == 1)
+            {
+                Console.WriteLine($"  {winningPlayer} Wins!  ");
+            }
+            else
+            {
+                Console.WriteLine($"        Tie Game!        ");
+            }
+
+            Console.WriteLine($"Would you like to play again? [y/n]: ");
+            string replay = Console.ReadLine();
+            Console.WriteLine();
+
+            // Restart game
+            if (replay.CompareTo("y") == 0)
+            {
+                Console.Clear();
+                return 0;
+            }
+            // Quite game
+            else if (replay.CompareTo("n") == 0)
+            {
+                return 4;
+            }
+
+            return 0;
+        }
+
         public void LoadingAnimation(int runtime)
         {
             // Stores the animation.
