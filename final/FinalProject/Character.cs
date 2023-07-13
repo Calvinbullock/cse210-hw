@@ -135,9 +135,14 @@ namespace final
             return _baseHealthLevel;
         }
 
-        public int GetPowerLevel()
+        public int GetCurrentPowerLevel()
         {
             return _currentPowerLevel;
+        }
+
+        public int GetBasePowerLevel()
+        {
+            return _basePowerLevel;
         }
 
     }
