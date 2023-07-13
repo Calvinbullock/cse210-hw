@@ -24,7 +24,8 @@ namespace final
             {
                 reciver.UpdateHealth(damageToReciver);
                 instigater.UpdateHealth(damageToInstigater);
-                return $"{instigater.GetName()} used SapSeed {damageToReciver} Dmg delt";
+
+                return $"{instigater.GetName()} used SapSeed {damageToReciver} Dmg delt, {damageToInstigater} HP gained";
 
             }
             // If health is at max move will fail
