@@ -20,7 +20,7 @@ namespace final
             int instigaterCurretnHealth = instigater.GetCurrentHealth();
 
             // Check if enough power to activate
-            if (instigater.GetPowerLevel() >= 2)
+            if (instigater.GetCurrentPowerLevel() >= 2)
             {
                 reciver.UpdateHealth(damageToReciver);
                 instigater.UpdateHealth(damageToInstigater);
