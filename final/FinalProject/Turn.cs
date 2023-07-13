@@ -35,6 +35,10 @@ namespace final
             {
                 actionSummerys.Add(action.ApplyActions());
             }
+
+            // Clear the list for next turn
+            actionSummerys.Clear();
+
             return actionSummerys;
         }
 
