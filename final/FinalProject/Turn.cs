@@ -40,7 +40,7 @@ namespace final
             }
 
             // Clear the list for next turn
-            actionSummerys.Clear();
+            _choosenActions.Clear();
 
             return actionSummerys;
         }
