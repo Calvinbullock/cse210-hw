@@ -125,6 +125,9 @@ namespace final
             ||                                                        ||
             \*========================================================*/
 
+            // TODO add a action summerie so new user know what 
+            //          each action deos
+
             List<Action> actionsList = instigater.GetAvalableActions();
             bool exit = false;
             int input = 0;
@@ -177,7 +180,7 @@ namespace final
 
             List<string> actionSummerys = turn.EndTurn();
 
-            // Print out Actions summeries
+            // Print out post Action summeries
             foreach (string actionSummery in actionSummerys)
             {
                 Console.WriteLine($"{actionSummery}");
