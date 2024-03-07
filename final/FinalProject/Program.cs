@@ -26,8 +26,8 @@ namespace final
             string playerCharName2 = "Select Charicter";
 
             // --------- player diffrent charicter info class instantiation --------- \\
-            Charicter flamout = new Charicter("GameTest", "fire monkey", 0, 0, 50);
-            // Charicter flamout = new Charicter("Flameout", "fire monkey", 10, 60, 50);
+            // Charicter flamout = new Charicter("GameTest", "fire monkey", 0, 0, 50);
+            Charicter flamout = new Charicter("Flameout", "fire monkey", 10, 60, 50);
             Charicter rockout = new Charicter("Rockout", "Earthen turtle", 10, 100, 30);
             Charicter slizzar = new Charicter("Slizzar", "Grass Snacke", 10, 80, 100);
             Charicter tailwind = new Charicter("Tailwind", "Air Hawk", 10, 40, 80);
